@@ -1,6 +1,9 @@
+
+
 import Link from "next/link";
 import React, { useState } from "react";
 import Logo from "./Logo";
+import ContactText from "../ContactText";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
@@ -17,22 +20,17 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href={"/"}>
-            <Logo />
+            
         </Link>
-        <div
-          onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
-        >
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className="center">
+          <ContactText />
         </div>
         <div className={`${navActive ? "active" : ""} nav__menu-list`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
                 setActiveIdx(idx);
-                setNavActive(false);
+                setNavActive(true);
               }}
               key={menu.text}
             >

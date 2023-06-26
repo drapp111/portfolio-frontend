@@ -27,7 +27,7 @@ function Header() {
 function Title() {
   return (
     <span>
-      <div className="contact-text" style={{marginBottom: '20px'}}>
+      <div className="title-text" style={{marginBottom: '20px'}}>
           <h1>Declan Rapp Theatrical Design</h1>
           <h6>-</h6>
           <h6>Lighting | Sound | Scenery</h6>
