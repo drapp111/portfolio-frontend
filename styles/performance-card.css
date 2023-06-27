@@ -1,0 +1,95 @@
+@font-face {
+    font-family: Lora;
+    src: url(fonts/Lora.ttf)
+  }
+
+.performance-section {
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 100%;
+    background-color: black;
+    contain: strict;
+    position:absolute;
+    top: 900px;
+    padding: 50px 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title {
+    position: absolute;
+    top: 50px;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.cards {
+    position: absolute;
+    top: 125px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    column-gap: 50px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 350px;
+    border: 1px solid white;
+    box-shadow: inset 0px 0px 10px 30px black;
+    background-color: rgb(43, 42, 42);
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 275px;
+    font-family: Lora;
+}
+
+.content.dates {
+    color:white;
+    font-size: 15px;
+    position: absolute;
+    top: 50px;
+
+}
+.content.title {
+    color: wheat;
+    font-style: italic;
+    font-size: 25px;
+    position: absolute;
+    top: 100px;
+
+}
+
+.content.subtitle {
+    color: wheat;
+    font-style: italic;
+    font-size: 15px;
+    position: absolute;
+    top: 140px;
+}
+
+.content.summary {
+    color: whitesmoke;
+    font-size: 15px;
+    position: absolute;
+    top: 190px;
+}
+
+.content.button {
+    color: whitesmoke;
+    background-color: rgb(161, 116, 32);
+    font-size: 17 px;
+    position: absolute;
+    top: 380px;
+    width: 100px;
+}
