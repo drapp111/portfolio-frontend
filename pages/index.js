@@ -58,7 +58,7 @@ function UpcomingPerformances() {
         <h3 style={{color:"goldenrod"}}>Upcoming Performances</h3>
       </div>  
       <div className="cards">
-        <PerformanceCarousel />
+        <PerformanceCarousel/>
       </div>
     </div>
   )
