@@ -5,7 +5,6 @@
 
 .performance-section {
     display: flex;
-    flex-direction: column;
     height: 700px;
     width: 100%;
     background-color: black;
@@ -26,12 +25,20 @@
 }
 
 .cards {
+    display: flex;
     position: absolute;
     top: 125px;
     justify-content: space-between;
-    display: flex;
     flex-direction: row;
     column-gap: 50px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    height: 500px;
+    width: 350px;
+    contain: strict;
 }
 
 .card {
@@ -92,4 +99,50 @@
     position: absolute;
     top: 380px;
     width: 100px;
+}
+
+.cards.slider {
+    top: 0px;
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.container.arrow {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 1px none;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    height: 100px;
+    width: 30px;
+    opacity: .2;
+}
+
+.container.arrow.next {
+    background-color: #fff;
+    border-radius: 10px 0px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.container.arrow.prev {
+    background-color: #fff;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0%;
+    top: 50%;
+    transform: translate(0%, -50%);
 }

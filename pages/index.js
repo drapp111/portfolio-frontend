@@ -1,6 +1,6 @@
 import ContactText from "../components/ContactText";
 import ContactButton from "../components/ContactButton";
-import PerformanceCard from "../components/PerformanceCard";
+import PerformanceCarousel from "../components/PerformanceCarousel";
 import Link from 'next/link';
 
 const background_style = {
@@ -58,11 +58,7 @@ function UpcomingPerformances() {
         <h3 style={{color:"goldenrod"}}>Upcoming Performances</h3>
       </div>  
       <div className="cards">
-        {PERFORMANCE_LIST.map((item) => (
-            <div key={item.title}>
-              <PerformanceCard {...item} />
-            </div>
-          ))}
+        <PerformanceCarousel />
       </div>
     </div>
   )
