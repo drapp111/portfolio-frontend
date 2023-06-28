@@ -15,9 +15,11 @@
     "next": "^13.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.9.0",
+    "react-icons": "^4.10.1",
     "react-native": "^0.72.0",
     "react-router-dom": "^6.13.0",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.10"
   }
 }
