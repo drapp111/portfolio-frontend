@@ -16,6 +16,12 @@ header {
   background-color: black;
 }
 
+.index-header {
+  display: flex;
+  position: relative;
+  height: 500px;
+}
+
 /*
 General Formatting
 */

@@ -7,35 +7,26 @@ const background_style = {
   backgroundImage: "url(dance/index-header.jpg)",
   backgroundSize: '100% auto',
   backgroundRepeat: 'no-repeat',
-  width: '100vw',
+  width: '100%',
   height: '100vh',
   contain: 'strict',
 }
-
-const PERFORMANCE_LIST = [
-  { dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", subtitle: "Presented by BLAAC", summary: "This production has a phenomenal cast and you don’t want to miss this monumental event. You’ll laugh, you’ll cry, you’ll jump to your feet with joy. Come out and enjoy this wonderful event. Opening night is a red carpet event. So put on your best red carpet attire and meet us.", button_text: "Tickets" },
-  { dates: "Testing", title: "Test", subtitle: "Test", summary: "Tests.", button_text: "Test" }
-];
 
 export default function Home() {
   return (
     <section>
       <Header />
+      <UpcomingPerformances />
     </section>
   );
 }
 
 function Header() {
   return (
-    <section>
-      <div style={background_style}>
-          <Title />
-          <ContactButton text="Get in Touch" />
-      </div>
-      <div>
-        <UpcomingPerformances />
-      </div>
-    </section>
+    <div className='index-header' style={background_style}>
+        <Title />
+        <ContactButton text="Get in Touch" />
+    </div>
   );
 }
 
@@ -57,9 +48,7 @@ function UpcomingPerformances() {
       <div className="section-title">
         <h3 style={{color:"goldenrod"}}>Upcoming Performances</h3>
       </div>  
-      <div className="cards">
-        <PerformanceCarousel/>
-      </div>
+      <PerformanceCarousel/>
     </div>
   )
 }

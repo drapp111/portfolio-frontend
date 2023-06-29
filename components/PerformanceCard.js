@@ -5,27 +5,7 @@ export default class PerformanceCard extends Component{
     
     render () {
         const {next,previous,active,index, ...props} = this.props;
-        const NextArrow = ({onClick}) => {
-            return (
-                <div className="container arrow next" onClick={next}>
-                    <FaArrowRight />
-                </div>
-            )
-        }
-            
-        const PrevArrow = ({onClick}) => {
-            return (
-                <div className="container arrow prev" onClick={previous}>
-                    <FaArrowLeft />
-                </div>
-            )
-        }
         return (
-            <div className="container">
-            <div style={active == 1 ? {display: 'flex'} : {display: 'none'}}>
-                    <NextArrow />
-                    <PrevArrow />
-                </div>
                 <div className="card">
                     <div className="content">
                         <div className="content dates">
@@ -45,7 +25,6 @@ export default class PerformanceCard extends Component{
                         </button>
                     </div>
                 </div>
-            </div>
         )
     }
 

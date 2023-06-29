@@ -12,6 +12,8 @@ export default class PerformanceCarousel extends Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
   }
+  //Progress to next slide
+  //Passed into the PerformanceCard component 
   next() {
     this.slider.slickNext();
   }
@@ -20,7 +22,7 @@ export default class PerformanceCarousel extends Component {
   }
  
   state = {
-    activeSlide: 0
+    activeSlide: null
   };
 
   render() {
@@ -35,25 +37,48 @@ export default class PerformanceCarousel extends Component {
 
     const SLIDES_TO_SHOW = (PERFORMANCE_LIST.length <= 3 ? PERFORMANCE_LIST.length : 3);
     const INITIAL_SLIDE = ((PERFORMANCE_LIST.length <= 2 ? 0 : 1))
+    const NUMBER_OF_CARDS = PERFORMANCE_LIST.length;
+    var active;
     const settings = {
       infinite:true,
-      className: (SLIDES_TO_SHOW <= 3 ? 'cards slider single' : 'cards slider multi'),
+      className: 'slider',
       centerPadding: '0px',
       slidesToShow: SLIDES_TO_SHOW,
       slidesToScroll: 1,
       dots: false,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      arrows: false,
       centerMode: true,
       initialSlide: INITIAL_SLIDE,
       beforeChange: (current, next) => this.setState({activeSlide: next}),
       onInit: () => this.setState({activeSlide: INITIAL_SLIDE})
     };
-    return (
+
+    const NextArrow = ({onClick}) => {
+      return (
+          <div className="arrow next" onClick={this.next}>
+              <FaArrowRight />
+          </div>
+      )
+    }
       
-      <div>
+    const PrevArrow = ({onClick}) => {
+      return (
+          <div className="arrow prev" onClick={this.previous}>
+              <FaArrowLeft />
+          </div>
+      )
+    }
+
+    return (
+      <div className="cards">
+        <NextArrow />
+        <PrevArrow />
         <Slider ref={c => (this.slider = c)} {...settings}>
             {PERFORMANCE_LIST.map((card, idx) => (
                 <div className={idx === this.state.activeSlide ? "slide activeSlide" : "slide"} key={card}>
-                    <PerformanceCard next = {this.next} previous = {this.previous} active = {idx === this.state.activeSlide ? 1 : 0} index={idx}{...card} />
+                    <PerformanceCard next = {this.next} previous = {this.previous} active = {active ? 1 : 0} index={idx}{...card} />
                 </div>
             ))}
         </Slider>
