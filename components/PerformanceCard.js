@@ -4,7 +4,7 @@ import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 export default class PerformanceCard extends Component{
     
     render () {
-        const {next,previous,active,index, ...props} = this.props;
+        const {...props} = this.props;
         return (
                 <div className="card">
                     <div className="content">

@@ -9,20 +9,6 @@
 }
 
 /*
-Header Formatting
-*/
-
-header {
-  background-color: black;
-}
-
-.index-header {
-  display: flex;
-  position: relative;
-  height: 500px;
-}
-
-/*
 General Formatting
 */
 
@@ -66,6 +52,13 @@ p {
   white-space: nowrap;
 }
 
+section {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
 /*
 Contact Text Formatting
 */
@@ -84,21 +77,6 @@ Contact Text Formatting
 }
 
 /*
-Title Formatting
-*/
-
-.title-text{
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 100px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: goldenrod;
-}
-
-/*
 Logo Image Formatting
 */
 
@@ -111,8 +89,8 @@ Logo Image Formatting
   position: absolute;
   top: 80px;
   left: 50%;
-  width: 20%;
-  height: 11%;
+  width: 200px;
+  height: 200px;
   transform: translate(-50%, -50%);
 }
 
@@ -126,17 +104,4 @@ button {
   border-radius: 5px;
   margin: 10px 0px;
   cursor: pointer;
-}
-
-.contactButton {
-  background-color: whitesmoke;
-  color: black;
-  font-size: 20px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: absolute;
-  top: 250px;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

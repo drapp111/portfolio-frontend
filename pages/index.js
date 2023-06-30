@@ -23,7 +23,9 @@ export default function Home() {
 
 function Header() {
   return (
-    <div className='index-header' style={background_style}>
+    <div className='index-header'>
+        <div className="index-header content"></div>
+        <img src="/dance/index-header.jpg"></img>
         <Title />
         <ContactButton text="Get in Touch" />
     </div>

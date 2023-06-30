@@ -41,8 +41,6 @@ export default class PerformanceCarousel extends Component {
     var active;
     const settings = {
       infinite:true,
-      className: 'slider',
-      centerPadding: '0px',
       slidesToShow: SLIDES_TO_SHOW,
       slidesToScroll: 1,
       dots: false,
@@ -75,11 +73,11 @@ export default class PerformanceCarousel extends Component {
       <div className="cards">
         <NextArrow />
         <PrevArrow />
-        <Slider ref={c => (this.slider = c)} {...settings}>
+        <Slider className="slider" ref={c => (this.slider = c)} {...settings}>
             {PERFORMANCE_LIST.map((card, idx) => (
-                <div className={idx === this.state.activeSlide ? "slide activeSlide" : "slide"} key={card}>
-                    <PerformanceCard next = {this.next} previous = {this.previous} active = {active ? 1 : 0} index={idx}{...card} />
-                </div>
+                <span className={idx === this.state.activeSlide ? "slide activeSlide" : "slide"} key={card}>
+                    <PerformanceCard{...card} />
+                </span>
             ))}
         </Slider>
         </div>
