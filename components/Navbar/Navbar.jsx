@@ -1,7 +1,7 @@
-import Link from "next/link";
+'use client'
+
 import React, { useState } from "react";
 import Logo from "./Logo";
-import ContactText from "../ContactText";
 import NavItem from "./NavItem";
 
 const MENU_LIST = [
@@ -15,7 +15,6 @@ const Navbar = () => {
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <header>
       <nav className={`nav`}>
         <Logo />
         <div className={`${navActive ? "active" : ""} nav__menu-list`}>
@@ -32,7 +31,6 @@ const Navbar = () => {
           ))}
         </div>
       </nav>
-    </header>
   );
 };
 

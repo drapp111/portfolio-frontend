@@ -2,7 +2,6 @@
 
 import Slider from "react-slick";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { useState } from "react";
 import PerformanceCard from "./PerformanceCard";
 import React, { Component } from "react";
 
@@ -55,15 +54,15 @@ export default class PerformanceCarousel extends Component {
 
     const NextArrow = ({onClick}) => {
       return (
-          <div className="arrow next" onClick={this.next}>
-              <FaArrowRight />
+          <div className="arrow" onClick={this.next}>
+            <FaArrowRight />
           </div>
       )
     }
       
     const PrevArrow = ({onClick}) => {
       return (
-          <div className="arrow prev" onClick={this.previous}>
+          <div className="arrow" onClick={this.previous}>
               <FaArrowLeft />
           </div>
       )
@@ -71,8 +70,15 @@ export default class PerformanceCarousel extends Component {
 
     return (
       <div className="cards">
-        <NextArrow />
-        <PrevArrow />
+        <div className="arrow-container">
+          <div className="arrow-container right">
+            <NextArrow />
+          </div>
+          <div className="arrow-container left">
+            <PrevArrow />
+          </div>
+          
+        </div>
         <Slider className="slider" ref={c => (this.slider = c)} {...settings}>
             {PERFORMANCE_LIST.map((card, idx) => (
                 <span className={idx === this.state.activeSlide ? "slide activeSlide" : "slide"} key={card}>

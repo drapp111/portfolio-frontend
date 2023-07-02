@@ -5,24 +5,22 @@
     font-family: Lora;
     src: url(/fonts/Lora.ttf)
   }
-
-  * {
-    box-sizing: border-box;
-  }
-
+  
 .performance-section {
-    contain: strict;
-    position:absolute;
-    top: 50%;
-    height: 50%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
     width: 100%;
-    background-color: black;
+    height: 50%;
+    top: 0;
+    contain: strict;
     justify-content: center;
+    align-items: center;
 }
 
 .section-title {
     display: flex;
-    position: absolute;
+    position: relative;
     height: 20%;
     width: 100%;
     justify-content: center;
@@ -32,40 +30,41 @@
 .cards {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 20%;
+    position: relative;
     width: 100%;
     height: 80%;
     justify-content: center;
+    align-items: center;
+    max-width: 1100px;
 }
 
 .slider {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    top: 0%;
+    position: relative;
     width: 100%;
     height: 100%;
-    border: 10px solid;
+    justify-content: center;
 }
 
 .slider div {
     display: flex;
     flex-direction: row;
+    height: 100%;
 }
+
 
 .slick-slide div {
     margin: auto;
     padding: 0px;
-    max-width: 350px;
 }
 
 .slide{
     display: flex;
-    height: 500px;
     transform: scale(0.2);
     transition: transform 300ms;
     opacity: 0.5;
+    width: 30em;
 }
 
 .slide div{
@@ -93,66 +92,119 @@
     border: 1px solid white;
     box-shadow: inset 0px 0px 10px 30px black;
     background-color: rgb(43, 42, 42);
+
 }
 
-.card div {
+
+.card.content-container {
     display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Lora;
+    padding: 30px;
 }
 
 .content{
     display: flex;
+    contain: strict;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 275px;
+    width: 100%;
+    height: 100%;
     font-family: Lora;
+    font-size: 50%;
 }
 
-.content.dates {
+.dates {
+    position: absolute;
+    top: 0vh;
     color:white;
-    font-size: 15px;
-    position: absolute;
-    top: 50px;
-
+    font-size: .8vh;
+    max-height: 2vh;
+    width: 100%;
 }
-.content.title {
+
+
+.title {
+    position: absolute;
+    top: 2vh;
     color: wheat;
     font-style: italic;
-    font-size: 25px;
-    position: absolute;
-    top: 100px;
-
+    justify-content: center;
+    font-size: 3em;
+    max-height: 6vh;
+    width: 100%;
 }
 
-.content.subtitle {
+
+.subtitle {
+    position: absolute;
+    bottom: 0;
     color: wheat;
     font-style: italic;
-    font-size: 15px;
-    position: absolute;
-    top: 140px;
+    font-size: 50%;
+    max-height: 25%;
+    width: 100%;
 }
 
-.content.summary {
+.summary {
+    position: absolute;
+    top: 9vh;
     color: whitesmoke;
-    font-size: 15px;
-    position: absolute;
-    top: 190px;
+    font-size: 1.5em;
+    max-height: 9vh;
+    width: 100%;
 }
 
-.content.button {
+.button {
+    position: absolute;
+    top: 20vh;
     color: whitesmoke;
     background-color: rgb(161, 116, 32);
-    font-size: 17 px;
+    font-size: 2em;
+}
+
+.arrow-container {
+    display: flex;
+    flex-direction: column;
     position: absolute;
-    top: 380px;
-    width: 100px;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+}
+
+.arrow-container.left {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    justify-self: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+}
+.arrow-container.right {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    justify-content: center;
+    justify-self: flex-end;
+    align-items: flex-end;
+    padding: 20px;
+    
 }
 
 .arrow {
     display: flex;
+    flex-direction: column;
     border: 1px none;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: grey;
     cursor: pointer;
     z-index: 10;
     height: 100px;
@@ -160,14 +212,5 @@
     opacity: .1;
     align-items: center;
     justify-content: center;
-}
-
-.arrow.next {
-    position: absolute;
-    right: 25%;
-}
-
-.arrow.prev {
-    position: absolute;
-    left: 25%;
+    color: black;
 }

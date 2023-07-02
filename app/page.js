@@ -1,3 +1,5 @@
+'use client'
+
 import ContactText from "../components/ContactText";
 import ContactButton from "../components/ContactButton";
 import PerformanceCarousel from "../components/PerformanceCarousel";
@@ -14,44 +16,59 @@ const background_style = {
 
 export default function Home() {
   return (
-    <section>
-      <Header />
-      <UpcomingPerformances />
-    </section>
+    <>
+        <section>
+            <Header />
+        </section>
+        <section>
+        </section>
+    </>
   );
 }
 
 function Header() {
   return (
-    <div className='index-header'>
-        <div className="index-header content"></div>
-        <img src="/dance/index-header.jpg"></img>
-        <Title />
-        <ContactButton text="Get in Touch" />
+    <div className="index-header-content">
+      <img src="/dance/index-header.jpg"></img>
+      <div className="box-shadow"></div>
+      <Title />
     </div>
   );
 }
 
 function Title() {
   return (
-    <span>
-      <div className="title-text" style={{marginBottom: '20px'}}>
+      <div className="title-text">
           <h1>Declan Rapp Theatrical Design</h1>
           <h6>-</h6>
           <h6>Lighting | Sound | Scenery</h6>
+          <ContactButton text = 'Contact Me'/>
       </div>
-    </span>
   )
 }
 
 function UpcomingPerformances() {
   return (
-    <div className="performance-section">
+    <>
       <div className="section-title">
         <h3 style={{color:"goldenrod"}}>Upcoming Performances</h3>
       </div>  
       <PerformanceCarousel/>
-    </div>
+    </>
   )
 }
 
+/**
+export default function Page() {
+    return (
+        <div>
+            <h1>Hello, Next.js!</h1>
+            <h1>Hello, Next.js!</h1>
+            <h1>Hello, Next.js!</h1>
+            <h1>Hello, Next.js!</h1>
+            <h1>Hello, Next.js!</h1>
+        </div>
+        
+    )
+  }
+   */

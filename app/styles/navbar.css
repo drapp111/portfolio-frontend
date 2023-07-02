@@ -2,25 +2,19 @@
 CSS Provided by template for navbar
 */
 
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
-  }
+
   a{
     text-decoration: none;
     color: inherit;
   }
   nav{
     display: flex;
-    padding: 16px;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: 180px;
+    height: 100%;
     box-shadow: inset 0px -20px 30px -30px whitesmoke;
     background-color: black;
+    
   }
   
   .nav__menu-bar{
@@ -28,16 +22,19 @@ CSS Provided by template for navbar
     flex-direction: column;
     row-gap: 6px;
     cursor: pointer;
+    
   }
   .nav__menu-bar div{
     width: 40px;
     height: 4px;
     background-color: black;
     border-radius: 2px;
+    
   }
   .nav__menu-list{
     display: flex;
     flex-direction: column;
+    position: absolute;
     row-gap: 24px;
     justify-content: center;
     align-items: center;
@@ -66,17 +63,35 @@ CSS Provided by template for navbar
     font-weight: bold;
     color: goldenrod;
   }
+
+  .logoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+  }
+
   @media screen and (min-width: 768px) {
     .nav__menu-bar{
       display: none;
+      
     }
     .nav__menu-list{
       position: absolute;
       flex-direction: row;
       min-height: fit-content;
       width: fit-content;
+      bottom: 0;
       column-gap: 35px;
       align-items: center;
+      border: 10px solid green;
     }
     .nav__link::before{
       content: '';

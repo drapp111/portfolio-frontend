@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;700&display=swap');
+@font-face {
+  font-family: RoxboroughCF;
+  src: url(/fonts/RoxboroughCF.ttf);
+}
+@font-face {
+  font-family: Lora;
+  src: url(/fonts/Lora.ttf)
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  border: 10px solid orange;
+  height: 100%;
+}
+
+body {
+  border: 10px solid red;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  border: 10px solid green;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  border: 10px solid green;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+footer {
+  border: 10px solid green;
+  height: 20%;
+}
+
+section {
+  border: 5px solid blue;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+General Formatting
+*/
+
+h1 {
+  font-family: RoxboroughCF;
+  font-size: 60px;
+  white-space: nowrap;
+}
+
+h2 {
+  font-family: RoxboroughCF;
+  font-size: 45px;
+  white-space: nowrap;
+}
+h3 {
+  font-family: RoxboroughCF;
+  font-size: 30px;
+  white-space: nowrap;
+}
+h4 {
+  font-family: Lora;
+  font-size: 45px;
+  white-space: nowrap;
+}
+h5 {
+  font-family: Lora;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+h6 {
+  font-family: Lora;
+  font-size: 20px;
+  white-space: nowrap;
+  color: whitesmoke;
+}
+
+p {
+  font-family: Lora;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+button {
+  font-family: Lora;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
