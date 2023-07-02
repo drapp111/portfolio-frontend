@@ -74,41 +74,34 @@ General Formatting
 
 h1 {
   font-family: RoxboroughCF;
-  font-size: 60px;
   white-space: nowrap;
 }
 
 h2 {
   font-family: RoxboroughCF;
-  font-size: 45px;
   white-space: nowrap;
 }
 h3 {
   font-family: RoxboroughCF;
-  font-size: 30px;
   white-space: nowrap;
 }
 h4 {
   font-family: Lora;
-  font-size: 45px;
   white-space: nowrap;
 }
 h5 {
   font-family: Lora;
-  font-size: 30px;
   white-space: nowrap;
 }
 
 h6 {
   font-family: Lora;
-  font-size: 20px;
   white-space: nowrap;
   color: whitesmoke;
 }
 
 p {
   font-family: Lora;
-  font-size: 15px;
   white-space: nowrap;
 }
 

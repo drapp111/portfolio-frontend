@@ -39,9 +39,9 @@ function Header() {
 function Title() {
   return (
       <div className="title-text">
-          <h1>Declan Rapp Theatrical Design</h1>
-          <h6>-</h6>
-          <h6>Lighting | Sound | Scenery</h6>
+          <h1 className="2xl:text-6xl xl:text-4xl lg:text-2xl md:text-xl sm:text-lg">Declan Rapp Theatrical Design</h1>
+          <h6 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">-</h6>
+          <h6 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">Lighting | Sound | Scenery</h6>
           <ContactButton text = 'Contact Me'/>
       </div>
   )

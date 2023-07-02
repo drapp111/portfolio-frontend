@@ -10,7 +10,6 @@ Title Formatting
     width: 100%;
     height: 100%;
     justify-content: center;
-    box-shadow: inset 0px 0px 70px 100px black;
   }
   
   .index-header-content img {
@@ -25,7 +24,7 @@ Title Formatting
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0px 0px 70px 100px black;
+    box-shadow: inset 0px 0px 70px 10px black;
     z-index: 10;
   }
   
@@ -39,7 +38,6 @@ Title Formatting
   .contactButton {
     background-color: whitesmoke;
     color: black;
-    font-size: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -47,7 +45,7 @@ Title Formatting
     margin-top: 50px;
   }
 
-  .contactButton::hover {
+  .contactButton:hover {
     color: wheat;
     background-color: goldenrod;
   }
