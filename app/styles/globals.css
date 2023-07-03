@@ -30,44 +30,6 @@
   box-sizing: border-box;
 }
 
-html {
-  border: 10px solid orange;
-  height: 100%;
-}
-
-body {
-  border: 10px solid red;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-header {
-  border: 10px solid green;
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  border: 10px solid green;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-
-}
-
-footer {
-  border: 10px solid green;
-  height: 20%;
-}
-
-section {
-  border: 5px solid blue;
-  height: 100%;
-  width: 100%;
-}
-
 /*
 General Formatting
 */
@@ -97,7 +59,6 @@ h5 {
 h6 {
   font-family: Lora;
   white-space: nowrap;
-  color: whitesmoke;
 }
 
 p {

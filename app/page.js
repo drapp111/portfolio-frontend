@@ -17,10 +17,11 @@ const background_style = {
 export default function Home() {
   return (
     <>
-        <section>
-            <Header />
+        <section className="h-1/2 w-full border-8 border-blue">
+          <Header />
         </section>
-        <section>
+        <section className="h-1/2 w-full border-8 border-blue">
+          
         </section>
     </>
   );
@@ -28,9 +29,9 @@ export default function Home() {
 
 function Header() {
   return (
-    <div className="index-header-content">
-      <img src="/dance/index-header.jpg"></img>
-      <div className="box-shadow"></div>
+    <div className="flex relative top-0 w-full h-full justify-center z-0">
+      <img className='absolute w-full h-full object-cover object-center z-10' src="/dance/index-header.jpg"></img>
+      <div className="absolute sm:shadow-inner md:shadow-inner-md lg:shadow-inner-lg xl:shadow-inner-xl 2xl:shadow-inner-2xl h-full w-full z-20"></div>
       <Title />
     </div>
   );
@@ -41,7 +42,7 @@ function Title() {
       <div className="title-text">
           <h1 className="2xl:text-6xl xl:text-4xl lg:text-2xl md:text-xl sm:text-lg">Declan Rapp Theatrical Design</h1>
           <h6 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">-</h6>
-          <h6 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">Lighting | Sound | Scenery</h6>
+          <h6 className="text-whitesmoke 2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">Lighting | Sound | Scenery</h6>
           <ContactButton text = 'Contact Me'/>
       </div>
   )

@@ -9,10 +9,11 @@ CSS Provided by template for navbar
   }
   nav{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    box-shadow: inset 0px -20px 30px -30px whitesmoke;
+    box-shadow: inset 0px -70px 70px -70px whitesmoke;
     background-color: black;
     
   }
@@ -34,15 +35,12 @@ CSS Provided by template for navbar
   .nav__menu-list{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
+    bottom: 0px;
     row-gap: 24px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     transition: all 0.2s;
   }
   .nav__menu-list.active{
@@ -70,35 +68,33 @@ CSS Provided by template for navbar
     justify-content: center;
     align-items: center;
     text-align: center;
-    position: absolute;
-    top: 80px;
-    left: 50%;
+    position: relative;
     width: 200px;
     height: 200px;
-    transform: translate(-50%, -50%);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 600px) {
     .nav__menu-bar{
       display: none;
       
     }
     .nav__menu-list{
-      position: absolute;
+      position: relative;
       flex-direction: row;
       min-height: fit-content;
-      width: fit-content;
+      width: 100%;
+      max-width: 1000px;
       bottom: 0;
-      column-gap: 35px;
+      column-gap: 20%;
       align-items: center;
-      border: 10px solid green;
+      justify-content: center;
     }
     .nav__link::before{
       content: '';
       position: absolute;
       width: 0%;
       height: 6px;
-      bottom: -16px;
+      bottom: -5px;
       left: 0;
       background-color: goldenrod;
       transition: all 0.2s;

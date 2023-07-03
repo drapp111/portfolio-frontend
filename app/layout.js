@@ -1,5 +1,7 @@
 import './styles/globals.css'
 import './styles/index/index.css'
+import './styles/navbar.css'
+import Navbar from "../components/Navbar/Navbar";
 
 
 export const metadata = {
@@ -9,15 +11,15 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body>
-        <header>
-
+    <html lang="en" className='border-8 border-red h-screen w-screen'>
+      <body className='border-8 border-yellow flex flex-col h-full w-full'>
+        <header className='border-4 border-green flex flex-col h-1/5'>
+          <Navbar />
         </header>
-        <main>
+        <main className='border-4 border-green flex flex-col h-3/5 w-full'>
           {children}
         </main>
-        <footer>
+        <footer className='border-4 border-green flex flex-col h-1/5 w-full'>
 
         </footer>
       </body>
