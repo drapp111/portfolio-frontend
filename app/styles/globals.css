@@ -34,10 +34,15 @@
 General Formatting
 */
 
-h1 {
-  font-family: RoxboroughCF;
-  white-space: nowrap;
+.nav-color {
+  -webkit-transition: color 1s;
+  -moz-transition:    color 1s;
+  -ms-transition:     color 1s;
+  -o-transition:      color 1s;
+  transition:         color 1s;
 }
+
+
 
 h2 {
   font-family: RoxboroughCF;
@@ -68,9 +73,28 @@ p {
 
 button {
   font-family: Lora;
-  padding: 10px 60px;
-  border-radius: 5px;
-  margin: 10px auto;
   cursor: pointer;
 }
 
+.cursor::after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  background-color: #fff;
+  animation: cursor 0.6s linear infinite alternate;
+  will-change: opacity;
+}
+ 
+@keyframes cursor {
+  0%,
+  40% {
+    opacity: 1;
+  }
+ 
+  60%,
+  100% {
+    opacity: 0;
+  }
+}

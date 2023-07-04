@@ -2,7 +2,7 @@ import './styles/globals.css'
 import './styles/index/index.css'
 import './styles/navbar.css'
 import Navbar from "../components/Navbar/Navbar";
-
+import Footer from "../components/Footer/Footer";
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,16 +11,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='border-8 border-red h-screen w-screen'>
-      <body className='border-8 border-yellow flex flex-col h-full w-full'>
-        <header className='border-4 border-green flex flex-col h-1/5'>
+    <html lang="en" className='border-8 border-orange min-h-fit h-full w-full'>
+      <body className='border-8 border-yellow min-h-fit h-full w-full overflow-auto'>
+        <header className='flex min-h-header h-fit w-full items-end justify-center bg-black'>
           <Navbar />
         </header>
-        <main className='border-4 border-green flex flex-col h-3/5 w-full'>
+        <main className='border-8 border-green flex flex-col min-h-8/10 h-fit w-full'>
           {children}
         </main>
-        <footer className='border-4 border-green flex flex-col h-1/5 w-full'>
-
+        <footer className='border-4 border-green bg-black flex flex-col min-h-footer h-fit w-full '>
+          <Footer />
         </footer>
       </body>
     </html>

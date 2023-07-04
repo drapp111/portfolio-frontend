@@ -22,14 +22,6 @@ module.exports = {
       'wheat' : '#f5deb3',
       'whitesmoke' : '#f5f5f5'
     },
-
-    extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
-    },
     boxShadow: {
       'sm' : '0 0 10px 5px black',
       DEFAULT : '0 0 20px 10px black',
@@ -39,10 +31,58 @@ module.exports = {
       '2xl' : '0 0 100px 50px black',
       'inner-sm' : 'inset 0 0 10px 5px black',
       'inner' : 'inset 0 0 20px 10px black',
-      'inner-md' : 'inset 0 0 40px 20px black',
-      'inner-lg' : 'inset 0 0 60px 30px black',
-      'inner-xl' : 'inset 0 0 80px 40px black',
-      'inner-2xl' : 'inset 0 0 100px 50px black'
+      'inner-md' : 'inset 0 0 40px 40px black',
+      'inner-lg' : 'inset 0 0 60px 60px black',
+      'inner-xl' : 'inset 0 0 80px 80px black',
+      'inner-2xl' : 'inset 0 0 100px 100px black'
+    },
+    extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontSize: {
+      },
+      height: {
+        'header': '5%',
+        '1/10' : '10%',
+        '2/10' : '20%',
+        '3/10' : '30%',
+        '4/10' : '40%',
+        '5/10' : '50%',
+        '6/10' : '60%',
+        '7/10' : '70%',
+        '8/10' : '80%',
+        '9/10' : '90%',
+        'footer' : '15%'
+      },
+      minHeight: {
+        'header': '5%',
+        '1/10' : '10%',
+        '2/10' : '20%',
+        '3/10' : '30%',
+        '4/10' : '40%',
+        '5/10' : '50%',
+        '6/10' : '60%',
+        '7/10' : '70%',
+        '8/10' : '80%',
+        '9/10' : '90%',
+        'footer' : '15%'
+      },
+      maxHeight: {
+        '1/10' : '10%',
+        '2/10' : '20%',
+        '3/10' : '30%',
+        '4/10' : '40%',
+        '5/10' : '50%',
+        '6/10' : '60%',
+        '7/10' : '70%',
+        '8/10' : '80%',
+        '9/10' : '90%',
+        
+        'footer' : '15%'
+      }
     }
   },
   plugins: [],

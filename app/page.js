@@ -17,8 +17,8 @@ const background_style = {
 export default function Home() {
   return (
     <>
-        <section className="h-1/2 w-full border-8 border-blue">
-          <Header />
+        <section className="max-h-1/2 w-full border-8 border-blue overflow-clip">
+          <PageHeader />
         </section>
         <section className="h-1/2 w-full border-8 border-blue">
           
@@ -27,11 +27,11 @@ export default function Home() {
   );
 }
 
-function Header() {
+function PageHeader() {
   return (
-    <div className="flex relative top-0 w-full h-full justify-center z-0">
-      <img className='absolute w-full h-full object-cover object-center z-10' src="/dance/index-header.jpg"></img>
-      <div className="absolute sm:shadow-inner md:shadow-inner-md lg:shadow-inner-lg xl:shadow-inner-xl 2xl:shadow-inner-2xl h-full w-full z-20"></div>
+    <div className="flex flex-col relative top-0 w-full h-full justify-center z-0">
+      <img className='relative h-full w-full object-cover object-center z-10' src="/dance/index-header.jpg"></img>
+      <div className="absolute border-2 border-purple h-full w-full sm:shadow-inner md:shadow-inner-md lg:shadow-inner-lg xl:shadow-inner-xl 2xl:shadow-inner-2xl h-full w-full z-20"></div>
       <Title />
     </div>
   );
@@ -39,10 +39,10 @@ function Header() {
 
 function Title() {
   return (
-      <div className="title-text">
-          <h1 className="2xl:text-6xl xl:text-4xl lg:text-2xl md:text-xl sm:text-lg">Declan Rapp Theatrical Design</h1>
-          <h6 className="2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">-</h6>
-          <h6 className="text-whitesmoke 2xl:text-2xl xl:text-xl lg:text-lg md:text-base sm:text-sm">Lighting | Sound | Scenery</h6>
+      <div className="text-center text-white absolute z-20 h-full w-full p-8 truncate">
+          <h1 className="text-lg text-whitesmoke 2xl:text-6xl xl:text-4xl lg:text-2xl md:text-xl sm:text-lg">Declan Rapp Theatrical Design</h1>
+          <h6 className="text-sm text-whitesmoke 2xl:text-2xl xl:text-xl lg:text-md md:text-base sm:text-sm">-</h6>
+          <h6 className="text-whitesmoke text-sm  2xl:text-2xl xl:text-xl lg:text-md md:text-base sm:text-sm">Lighting | Sound | Scenery</h6>
           <ContactButton text = 'Contact Me'/>
       </div>
   )
@@ -58,18 +58,3 @@ function UpcomingPerformances() {
     </>
   )
 }
-
-/**
-export default function Page() {
-    return (
-        <div>
-            <h1>Hello, Next.js!</h1>
-            <h1>Hello, Next.js!</h1>
-            <h1>Hello, Next.js!</h1>
-            <h1>Hello, Next.js!</h1>
-            <h1>Hello, Next.js!</h1>
-        </div>
-        
-    )
-  }
-   */

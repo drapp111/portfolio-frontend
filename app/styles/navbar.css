@@ -7,16 +7,7 @@ CSS Provided by template for navbar
     text-decoration: none;
     color: inherit;
   }
-  nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    box-shadow: inset 0px -70px 70px -70px whitesmoke;
-    background-color: black;
-    
-  }
+
   
   .nav__menu-bar{
     display: flex;
@@ -34,7 +25,6 @@ CSS Provided by template for navbar
   }
   .nav__menu-list{
     display: flex;
-    flex-direction: column;
     position: relative;
     bottom: 0px;
     row-gap: 24px;
@@ -45,12 +35,6 @@ CSS Provided by template for navbar
   }
   .nav__menu-list.active{
     right: 0;
-  }
-  .nav__link{
-    font-size: 18px;
-    position: relative;
-    transition: all 0.2s;
-    color: grey;
   }
   
   .nav__link:hover{

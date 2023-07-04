@@ -1,8 +1,8 @@
 import React from "react";
 export default function Logo() {
   return (
-    <div className="flex h-5/6 justify-center align-center self-center text-center">
-      <img src='/logo.png' className="h-full w-full object-contain"/>
+    <div className="relative w-6/10 bottom-0 mix-blend-lighten">
+      <img src='/logo-modified.png' className="h-10 w-auto md:h-20 lg:h-25 xl:h-30 object-cover"/>
     </div>
   )
 };
