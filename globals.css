@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: RoxboroughCF;
+  src: url(/fonts/RoxboroughCF.ttf);
+}
+@font-face {
+  font-family: Lora;
+  src: url(/fonts/Lora.ttf)
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply
+      min-h-screen
+      h-fit
+    ;
+  }
+
+  header {
+    @apply
+      hidden sm:flex
+      min-h-header
+      h-fit
+      w-full
+      justify-center
+      items-end
+      bg-black
+    ;
+  }
+
+  main {
+    @apply
+      min-h-fit
+      h-main
+      w-full
+      bg-black
+    ;
+  }
+
+  footer {
+    @apply  
+      flex
+      flex-col
+      min-h-footer-mobile sm:min-h-footer
+      h-fit
+      w-full
+      bg-black
+  }
+
+
+  h1 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-4xl 2xl:text-6xl
+    ;
+  }
+  h2 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-lg sm:text-base md:text-lg lg:text-xl xl:text-3xl 2xl:text-5xl
+    ;
+  }
+  h3 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-base sm:text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-4xl
+    ;
+  }
+  h4 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-sm sm:text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-4xl
+    ;
+  }
+  h5 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-xs sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-3xl
+    ;
+  }
+  h6 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-mobile sm:text-mobile md:text-xs lg:text-sm xl:text-lg 2xl:text-2xl
+    ;
+  }
+  
+  p {
+    @apply
+      font-body
+    ;
+  }
+  
+  button {
+    @apply
+      font-subtitle
+    ;
+    cursor: pointer;
+  }
+
+  .nav-color {
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+  }
+  
+}
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+/*
+General Formatting
+*/
+
+
+
+

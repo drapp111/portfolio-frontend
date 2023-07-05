@@ -1,7 +1,7 @@
-import './styles/globals.css'
-import './styles/index/index.css'
-import './styles/navbar.css'
+import '../globals.css'
+import './styles/index/performance-card.css'
 import Navbar from "../components/Navbar/Navbar";
+import MobileNavbar from "../components/MobileNavbar";
 import Footer from "../components/Footer/Footer";
 
 export const metadata = {
@@ -11,16 +11,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className='border-8 border-orange min-h-fit h-full w-full'>
-      <body className='border-8 border-yellow min-h-fit h-full w-full overflow-auto'>
-        <header className='flex min-h-header h-fit w-full items-end justify-center bg-black'>
+    <html lang="en">
+      <body className='bg-black'>
+        <header>
           <Navbar />
         </header>
-        <main className='border-8 border-green flex flex-col min-h-8/10 h-fit w-full'>
+        <main>
           {children}
         </main>
-        <footer className='border-4 border-green bg-black flex flex-col min-h-footer h-fit w-full '>
+        <footer>
           <Footer />
+          <MobileNavbar />
         </footer>
       </body>
     </html>

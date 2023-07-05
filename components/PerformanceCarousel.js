@@ -1,92 +1,24 @@
-
-
-import Slider from "react-slick";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { Carousel } from 'flowbite-react';
 import PerformanceCard from "./PerformanceCard";
 import React, { Component } from "react";
 
-export default class PerformanceCarousel extends Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-  }
-  //Progress to next slide
-  //Passed into the PerformanceCard component 
-  next() {
-    this.slider.slickNext();
-  }
-  previous() {
-    this.slider.slickPrev();
-  }
- 
-  state = {
-    activeSlide: null
-  };
+export default function PerformanceCarousel() {
+  const PERFORMANCE_LIST = [
+    { dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", button_text: "Tickets", button_link: ""}
+    ,{ dates: "Dates", title: "Test", button_text: "Tickets", button_link: ""}
+  ];
 
-  render() {
-    const PERFORMANCE_LIST = [
-      
-      { dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", subtitle: "Presented by BLAAC", summary: "This production has a phenomenal cast and you don’t want to miss this monumental event. You’ll laugh, you’ll cry, you’ll jump to your feet with joy. Come out and enjoy this wonderful event. Opening night is a red carpet event. So put on your best red carpet attire and meet us.", button_text: "Tickets" },
-      { dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", subtitle: "Presented by BLAAC", summary: "This production has a phenomenal cast and you don’t want to miss this monumental event. You’ll laugh, you’ll cry, you’ll jump to your feet with joy. Come out and enjoy this wonderful event. Opening night is a red carpet event. So put on your best red carpet attire and meet us.", button_text: "Tickets" }
-      ,{ dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", subtitle: "Presented by BLAAC", summary: "This production has a phenomenal cast and you don’t want to miss this monumental event. You’ll laugh, you’ll cry, you’ll jump to your feet with joy. Come out and enjoy this wonderful event. Opening night is a red carpet event. So put on your best red carpet attire and meet us.", button_text: "Tickets" }
-      ,{ dates: "June 23, 2023 - July 2nd, 2023", title: "The Color Purple", subtitle: "Presented by BLAAC", summary: "This production has a phenomenal cast and you don’t want to miss this monumental event. You’ll laugh, you’ll cry, you’ll jump to your feet with joy. Come out and enjoy this wonderful event. Opening night is a red carpet event. So put on your best red carpet attire and meet us.", button_text: "Tickets" }
 
-    ];
-
-    const SLIDES_TO_SHOW = (PERFORMANCE_LIST.length <= 3 ? PERFORMANCE_LIST.length : 3);
-    const INITIAL_SLIDE = ((PERFORMANCE_LIST.length <= 2 ? 0 : 1))
-    const NUMBER_OF_CARDS = PERFORMANCE_LIST.length;
-    var active;
-    const settings = {
-      infinite:true,
-      slidesToShow: SLIDES_TO_SHOW,
-      slidesToScroll: 1,
-      dots: false,
-      autoplay: true,
-      autoplaySpeed: 5000,
-      arrows: false,
-      centerMode: true,
-      initialSlide: INITIAL_SLIDE,
-      beforeChange: (current, next) => this.setState({activeSlide: next}),
-      onInit: () => this.setState({activeSlide: INITIAL_SLIDE})
-    };
-
-    const NextArrow = ({onClick}) => {
-      return (
-          <div className="arrow" onClick={this.next}>
-            <FaArrowRight />
-          </div>
-      )
-    }
-      
-    const PrevArrow = ({onClick}) => {
-      return (
-          <div className="arrow" onClick={this.previous}>
-              <FaArrowLeft />
-          </div>
-      )
-    }
-
-    return (
-      <div className="cards">
-        <div className="arrow-container">
-          <div className="arrow-container right">
-            <NextArrow />
-          </div>
-          <div className="arrow-container left">
-            <PrevArrow />
-          </div>
-          
-        </div>
-        <Slider className="slider" ref={c => (this.slider = c)} {...settings}>
-            {PERFORMANCE_LIST.map((card, idx) => (
-                <span className={idx === this.state.activeSlide ? "slide activeSlide" : "slide"} key={card}>
-                    <PerformanceCard{...card} />
-                </span>
-            ))}
-        </Slider>
-        </div>
-    )
-  }
+  return (
+    <Carousel indicators={false} slide={false}>
+      {PERFORMANCE_LIST.map((card, idx) => (
+                <div className='flex min-h-36 h-44 w-28 sm:h-48 sm:w-32 md:h-60 md:w-44 lg:h-72 lg:w-56 items-center justify-center' key={card}>
+                    <PerformanceCard {...card} />
+                </div>
+       ))}
+    </Carousel>
+  )
 }
+
+
+
