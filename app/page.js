@@ -48,13 +48,11 @@ function Title() {
 function UpcomingPerformances() {
   return (
     <div className=" flex flex-col relative w-full h-full items-center">
-      <div className=" flex h-2/10 w-full justify-center items-center">
-        <h3>Upcoming Performances</h3>
+      <div className=" flex h-1/10 w-full justify-center items-center">
+        <h2>Upcoming Performances</h2>
       </div>
       <div className="flex min-h-fit h-full w-full items-center justify-center">
-        <div className="flex relative w-full h-full min-h-36 sm:h-2/3 sm:w-2/3 md:h-5/6 md:w-3/6 xl:w-2/6 2xl:1/6">
           <PerformanceCarousel/>
-        </div>
       </div>
       
     </div>

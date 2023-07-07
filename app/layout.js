@@ -1,8 +1,7 @@
 import '../globals.css'
-import './styles/index/performance-card.css'
 import Navbar from "../components/Navbar/Navbar";
 import MobileNavbar from "../components/MobileNavbar";
-import Footer from "../components/Footer/Footer";
+import PageFooter from "../components/Footer";
 
 export const metadata = {
   title: 'Create Next App',
@@ -20,7 +19,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <footer>
-          <Footer />
+          <PageFooter />
           <MobileNavbar />
         </footer>
       </body>
