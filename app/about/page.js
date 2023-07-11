@@ -1,21 +1,45 @@
+'use client'
+import CardFlip from "@/components/CardFlip";
+import React, { Component } from "react";
+import { Button} from 'flowbite-react';
+import Biography from '/public/text/Biography.jsx';
+import {Experiences} from '/public/text/ExperienceCards'
+
+
 export default function Home() {
   return (
     <>
-        <section className="flex flex-row min-h-fit h-1/2 w-full border-8 border-blue">
-          <div className="relative w-1/2 flex border-2">
-            <img src='/godspell/Godspell__438.jpg' className="h-full w-full object-cover object-center" alt='Godspell - Le Moyne College 2022' />
-            <div className="absolute w-full h-full shadow-inner-md border-2 border-green"></div>
-          </div>
-          <div className="w-1/2 flex flex-col border-2 border-orange">
-            <div className="h-2/10 flex items-center justify-center text-center">
+        <section className="flex flex-col max-h-min sm:flex-row justify-center w-full">
+
+            <div className="flex bg-cover bg-no-repeat bg-center w-full min-h-4/10vh shadow-inner-md items-center justify-center" style={{backgroundImage: `url(/godspell/Godspell__438.jpg)`}} >
+              <h1 className="sm:hidden text-4xl">About Me</h1>
+            </div>
+          <div className="relative flex flex-col p-0 sm:p-8 gap-y-4 w-full h-1/2 sm:h-full">
+            <div className="hidden h-2/10 mb-4 sm:flex items-center justify-center text-center">
               <h1>About Me</h1>
             </div>
-            <div className="h-8/10 flex items-center justify-center text-left text-whitesmoke border-2 border-blue">
-                A graduate of Le Moyne College, with majors in Theater Arts and Computer Science, Declan's work in theater has varied, including work in stage management, light design, set design, and performance. Declan has taken classes which have covered the fundamentals of theater design, lighting design, advanced acting methods, acting for Shakespeare, and technical theater topics. Past credits include: Come Like Shadows (Lighting Designer/Producer), The Wolves (Lighting Designer), Godspell (Lighting Designer), The Squirrels (Stage Manager), I Hate Hamlet (Set Designer), The (One-Act) Play that Goes Wrong (Lighting Designer), Hand to God (Director), Bare: A Pop Opera (Actor), The Children's Hour (Lighting Designer), Le Moyne Student Dance Co. Recitals (Lighting Designer), The Trojan Women (Stage Manager), and Corduroy! (Sound Operator). Declan's experience also includes carpentry and set construction, having worked in the Le Moyne College scenery shop for three years.
+            <div className="flex h-fit sm:h-8/10 items-start justify-center text-center text-whitesmoke overflow-y-auto">
+                <Biography />
             </div>
           </div>
         </section>
-        <section className="min-h-fit h-1/2 w-full border-8 border-blue">
+        <section className="flex flex-col sm:gap-y-4 bg-black sm:flex-col p-8 justify-evenly w-full">
+          <div className="flex flex-col place-items-center text-center sm: mb-8 xl:mb-16">
+            <h1>Select Experience</h1>
+          </div>
+          <div className="flex p-4 justify-center w-full">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-y-0 sm:gap-x-16 sm:flex-row justify-evenly">
+              {Experiences.map((card, idx) => (
+                <div key={idx}>
+                  <CardFlip {...card} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="flex flex-col self-center">
+            <h2 className="mb-8 text-center">Full Design Resume</h2>
+            <Button pill size='sm' color="whitesmoke"  className='transition-all self-center duration-500 hover:translate-y-1 bg-night hover:bg-whitesmoke border border-white hover:border-black text-whitesmoke hover:text-black w-36 shadow-md hover:shadow-xs shadow-whitesmoke hover:shadow-sm text-xs'>Download</Button>
+          </div>
         </section>
     </>
   );

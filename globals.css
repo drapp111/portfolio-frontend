@@ -18,8 +18,10 @@
 
   body {
     @apply
+      flex
+      flex-col
+      relative
       min-h-screen
-      h-fit
     ;
   }
 
@@ -27,10 +29,7 @@
     @apply
       hidden sm:flex
       min-h-header
-      h-header
       w-full
-      justify-center
-      items-end
       bg-eerie
       rounded-b-lg
       overflow-visible
@@ -40,10 +39,9 @@
 
   main {
     @apply
-      min-h-screen
-      h-main
       w-full
       bg-black
+      min-h-9/10vh
       justify-between
       z-0
     ;
@@ -53,6 +51,7 @@
     @apply  
       flex
       flex-col
+      relative
       min-h-footer-mobile sm:min-h-footer
       h-fit
       w-full
@@ -128,7 +127,6 @@
       flex-col
       rounded-lg
       shadow-md
-      m-auto
     ;
   }
 
@@ -147,20 +145,16 @@
       whitespace-normal
       leading-none
       text-center
-      text-black
-      text-mobile sm:text-xs lg:text-sm
     ;
   }
 
   .card-child h5 {
     @apply
-      text-black
       whitespace-normal
       text-center
       italic
       font-bold
       leading-none
-      text-xs sm:text-sm md:text-sm lg:text-xl xl:text-xl 2xl:text-xl
     ;
   }
 
@@ -175,6 +169,37 @@
       border border-wheat
       bg-wheat
       shadow-goldenrod
+    ;
+  }
+
+  .experience-card {
+    @apply
+      shadow-whitesmoke
+      border
+      p-4
+    ;
+  }
+
+  .experience-card.front {
+    @apply
+      border-eerie
+      bg-eerie
+      shadow-inner
+      shadow-black
+      w-36 h-48 sm:scale-125 xl:scale-150
+      mb-0 sm:mb-16 xl:mb-24
+      
+    ;
+  }
+
+  .experience-card.back {
+    @apply
+      border-wheat
+      bg-white
+      shadow-shine-sm shadow-whitesmoke
+      w-36 h-48 sm:scale-125 xl:scale-150
+      mb-0 sm:mb-16 xl:mb-24
+      p-0
     ;
   }
 

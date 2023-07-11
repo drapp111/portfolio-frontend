@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
       <nav className='flex justify-center h-full w-full pb-2 bg-night rounded-b-lg shadow-md shadow-gray z-50'>
-        <div className='pl-2 pr-2 relative items-center justify-center flex w-full h-full gap-x-10  md:gap-x-16 xl:w-1/2 2xl:w-1/2'>
+        <div className='pl-2 pr-2 relative items-end justify-center flex w-full h-full gap-x-10  md:gap-x-16 xl:w-1/2 2xl:w-1/2'>
             <div className="flex w-1/10 h-full justify-center items-end">
               <NavItem active={pathname == '/'} {...MENU_LIST[0]} />
             </div>
