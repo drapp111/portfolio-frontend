@@ -36,12 +36,9 @@ export default function PageFooter() {
                     </a>
                     <div className='flex flex-row gap-x-2 md:gap-x-4 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-20 w-full text-whitesmoke items-center justify-between lg:w-fit'>
                             <Link href="https://linkedin.com/in/declanrapp" target="_blank" className='flex flex-row fill-whitesmoke hover:fill-goldenrod visited:fill-wheat text-whitesmoke hover:text-goldenrod visited:text-wheat items-center'>
-                                <IconContext.Provider value={{ className: "", size: '50px' }}>
-                                    <Footer.Icon
-                                        icon={FaLinkedin}
-                                        />
-                                </IconContext.Provider>
-                                    
+                                <Footer.Icon
+                                    icon={FaLinkedin}
+                                />
                                 <div className='ml-2 text-xs sm:text-base md:text-lg lg:text-xl'> 
                                     LinkedIn
                                 </div>

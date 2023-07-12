@@ -6,7 +6,7 @@ import Biography from '/public/text/Biography.jsx';
 import {Experiences} from '/public/text/ExperienceCards'
 
 
-export default function Home() {
+export default function Page() {
   return (
     <>
         <section className="flex flex-col max-h-min sm:flex-row justify-center w-full">

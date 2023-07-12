@@ -12,7 +12,7 @@ const background_style = {
   contain: 'strict',
 }
 
-export default function Home() {
+export default function Page() {
   return (
     <>
         <section className="flex flex-col w-full">
