@@ -15,10 +15,10 @@ const background_style = {
 export default function Home() {
   return (
     <>
-        <section className="min-h-fit h-1/2 w-full overflow-clip">
+        <section className="flex flex-col w-full">
           <PageHeader />
         </section>
-        <section className="min-h-fit h-1/2 w-full">
+        <section className="flex flex-col w-full mb-8">
           <UpcomingPerformances />
         </section>
     </>
@@ -27,8 +27,7 @@ export default function Home() {
 
 function PageHeader() {
   return (
-    <div className="flex relative h-full justify-center z-0">
-      <img className='h-full w-full object-cover object-center z-10' src="/dance/index-header.jpg"></img>
+    <div className="flex relative min-h-5/10vh justify-center bg-center bg-no-repeat bg-cover" style={{backgroundImage: `url(/dance/index-header.jpg)`}}>
       <Title />
     </div>
   );
@@ -36,7 +35,7 @@ function PageHeader() {
 
 function Title() {
   return (
-      <div className=" text-center text-white absolute z-20 h-full w-full p-8 landscape:p-2 landscape:lg:p-8 truncate shadow-inner sm:shadow-inner md:shadow-inner-md lg:shadow-inner-lg xl:shadow-inner-xl 2xl:shadow-inner-2xl">
+      <div className="flex flex-col items-center text-center text-white absolute z-20 h-full w-full p-8 truncate shadow-inner sm:shadow-inner md:shadow-inner-md lg:shadow-inner-lg xl:shadow-inner-xl 2xl:shadow-inner-2xl">
           <h1>Declan Rapp Theatrical Design</h1>
           <h4>-</h4>
           <h4>Lighting | Sound | Scenery</h4>
@@ -47,14 +46,13 @@ function Title() {
 
 function UpcomingPerformances() {
   return (
-    <div className=" flex flex-col relative w-full h-full items-center">
-      <div className=" flex h-1/10 w-full justify-center items-center">
+    <div className="flex flex-col">
+      <div className="flex min-h-1/10vh justify-center items-center">
         <h2>Upcoming Performances</h2>
       </div>
-      <div className="flex min-h-fit h-full w-full items-center justify-center">
-          <PerformanceCarousel/>
+      <div className="flex min-h-4/10vh h-fit justify-center">
+        <PerformanceCarousel />
       </div>
-      
     </div>
   )
 }

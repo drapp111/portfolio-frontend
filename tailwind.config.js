@@ -125,14 +125,22 @@ module.exports = {
         'inner-lg' : 'inset 0 0 60px 60px black',
         'inner-xl' : 'inset 0 0 80px 80px black',
         'inner-2xl' : 'inset 0 0 100px 100px black',
-        'shine-sm' : '0 0 10px 5px',
-        'shine' : '0 0 20px 10px',
-        'shine-md' : '0 0 40px 20px',
-        'shine-lg' : '0 0 60px 30px',
-        'shine-xl' : '0 0 80px 40px',
-        'shine-2xl' : '0 0 100px 50px',
+        'shine-sm' : '0 0 10px 5px black',
+        'shine' : '0 0 20px 10px black',
+        'shine-md' : '0 0 40px 20px black',
+        'shine-lg' : '0 0 60px 30px black',
+        'shine-xl' : '0 0 80px 40px black',
+        'shine-2xl' : '0 0 100px 50px black',
         'footer' : '0 -5px 5px -3px gray'
       },
+      boxShadowColor : {
+        'goldenrod' : '#daa520',
+        'wheat' : '#f5deb3',
+        'whitesmoke' : '#f5f5f5',
+        'jet' : '#333533',
+        'night': '#0A0A0A',
+        'eerie' : '#1F1F1F'
+      }
     },
     
   },

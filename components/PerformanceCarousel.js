@@ -10,11 +10,11 @@ export default function PerformanceCarousel() {
 
 
   return (
-    <Carousel indicators={false} slide={false} className='relative w-full h-full sm:w-2/3 md:w-2/3 lg:w-1/2 xl:w-2/6'>
+    <Carousel indicators={false} slide={false} className='relative self-center w-full sm:w-1/2 xl:w-1/3'>
       {PERFORMANCE_LIST.map((card, idx) => (
-                <div className='flex h-full justify-center overflow-y-auto' key={card}>
-                    <PerformanceCard {...card} />
-                </div>
+        <div className='relative mb-8 h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72' key={idx}>
+          <PerformanceCard {...card} />
+        </div>
        ))}
     </Carousel>
   )

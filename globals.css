@@ -166,7 +166,7 @@
 
   .performance-card {
     @apply
-      border border-wheat
+      border border-whitesmoke
       bg-wheat
       shadow-goldenrod
     ;
