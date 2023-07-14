@@ -94,7 +94,7 @@ export default function Page() {
             </div>
           </div>
           <div className='flex flex-col h-full w-full items-center justify-evenly min-h-6/10vh'>
-            <div className='relative hidden sm:flex flex-col justify-evenly items-center sm:w-1/3 mb-8'>
+            <div className='relative hidden sm:flex flex-col justify-evenly items-center p-4 sm:w-1/3 mb-8'>
                 <h1 className="text-4xl text-center mb-4">Get in Touch</h1>
                 <p className='text-whitesmoke text-center whitespace-wrap'>We use an agile approach to test assumptions and connect with the needs of your audience early and often.</p>
             </div>

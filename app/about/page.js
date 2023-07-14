@@ -28,7 +28,7 @@ export default function Page() {
             <h1>Select Experience</h1>
           </div>
           <div className="flex p-4 justify-center w-full">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-y-0 sm:gap-x-16 sm:flex-row justify-evenly">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-4 gap-x-4 sm:gap-y-4 sm:gap-x-24 sm:flex-row justify-evenly">
               {Experiences.map((card, idx) => (
                 <div key={idx}>
                   <CardFlip {...card} />
