@@ -201,6 +201,13 @@
       mb-0 sm:mb-16 xl:mb-24
       p-0
     ;
+    
+  }
+
+  .alert {
+    @apply
+      text-alert
+    ;
   }
 
 

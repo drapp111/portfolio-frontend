@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Typical from 'react-typical'
+import { TypeAnimation } from 'react-type-animation';
 import { Footer } from 'flowbite-react';
 import { IconContext } from "react-icons";
 import { FaLinkedin, FaGithub, FaInstagram, FaTwitter, FaReact } from 'react-icons/fa';
@@ -23,15 +23,15 @@ export default function PageFooter() {
                     <a href='/' className='mb-4 hidden items-center justify-center lg:flex lg:flex-row sm:mb-0'>
                         <img alt='Declan Rapp Theatrical Design Logo' src='/logo-modified.png' className='flex mr-0 sm:mr-3 h-12 sm:h-24' />
                         <span className='self-center whitespace-nowrap text-lg sm:text-2xl font-semibold text-whitesmoke dark:text-whitesmoke'>
-                        <Typical
-                            steps={[
-                                'Create with Passion', 3000,
-                                'Lead with Empathy', 3000,
-                                'Inspire Change', 3000
-                            ]}
-                            wrapper='div'
-                            loop={Infinity}
-                        />
+                            <TypeAnimation
+                                sequence={[
+                                    'Create with Passion', 3000,
+                                    'Lead with Empathy', 3000,
+                                    'Inspire Change', 3000
+                                ]}
+                                wrapper='div'
+                                repeat={Infinity}
+                            />
                         </span>
                     </a>
                     <div className='flex flex-row gap-x-2 md:gap-x-4 lg:gap-x-8 xl:gap-x-10 2xl:gap-x-20 w-full text-whitesmoke items-center justify-between lg:w-fit'>
