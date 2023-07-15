@@ -207,6 +207,7 @@
   .alert {
     @apply
       text-alert
+      text-left
     ;
   }
 

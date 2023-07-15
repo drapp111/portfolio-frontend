@@ -53,9 +53,9 @@ export default function Page() {
                 <h1 className="text-4xl text-center mb-4">Get in Touch</h1>
                 <p className='text-whitesmoke text-center whitespace-wrap'>We use an agile approach to test assumptions and connect with the needs of your audience early and often.</p>
             </div>
-            <div className="relative flex min-h-4/10vh w-full sm:max-w-2xl p-8 border border-whitesmoke bg-eerie rounded-lg will-change-transform transform-all duration-500">
-              <div className="flex flex-col h-fit w-full justify-center text-center text-whitesmoke will-change-transform transform-all duration-500">
-                <div className={`${(submitted || successful) ? 'hidden opacity-0' : 'opacity-100'} transition-all duration-500 delay-150`}>
+            <div className="min-h-4/10vh h-auto max-h-6/10vh flex justify-center items-center relative w-full sm:max-w-2xl">
+              <div className={`${(successful) ? 'opacity-0 z-0 delay-0' : 'opacity-100 z-10 delay-200'} absolute transition-all duration-500 flex min-h-4/10vh w-full sm:max-w-2xl p-8 border border-whitesmoke bg-eerie rounded-lg`}>
+                <div className="p-8 flex flex-col h-fit w-full justify-center text-center text-whitesmoke">
                   <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-6 w-full">
                         <div className='relative'>
@@ -71,9 +71,10 @@ export default function Page() {
                           <div className='absolute inset-y-0 left-0 flex items-center pl-3.5'>
                             <FaEnvelope fill="whitesmoke" className='w-4 h-4'/>
                           </div>
-                          <input type="text" id="contactEmail" {...register("contactEmail", { required: true, pattern: '/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/</>'})} className="flex w-full rounded-lg pl-10 p-2.5 bg-eerie text-whitesmoke border border-whitesmoke focus:border-goldenrod focus:ring-goldenrod" placeholder="Email" />
+                          <input type="text" id="contactEmail" {...register("contactEmail", { required: true, pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/})} className="flex w-full rounded-lg pl-10 p-2.5 bg-eerie text-whitesmoke border border-whitesmoke focus:border-goldenrod focus:ring-goldenrod" placeholder="Email" />
                         </div>
                         {errors.contactEmail?.type==='required' && <div className='alert'>This field is required</div>}
+                        {errors.contactEmail?.type==='pattern' && <div className='alert'>Invalid email address</div>}
                     </div>
                     <div className="mb-6 w-full">
                         <div className='relative'>
@@ -98,24 +99,27 @@ export default function Page() {
                         {errors.contactReference && <div className='alert'>This field is required</div>}
                     </div>
                     <div className="w-full flex justify-center items-center">
-                      <Button size='md' pill color="whitesmoke" onClick={handleSubmit(onSubmit)} className='transition-all duration-500 w-1/2 border border-whitesmoke hover:border-black bg-eerie hover:bg-goldenrod text-whitesmoke hover:text-eerie'>
-                        Submit
+                      <Button size='md' pill color="whitesmoke" onClick={handleSubmit(onSubmit)} className={`${submitted ? 'bg-goldenrod border-black text-eerie' : 'bg-eerie border-whitesmoke text-whitesmoke'} transition-all duration-500 w-1/2 border hover:border-black hover:bg-goldenrod hover:text-eerie`}>
+                        {!submitted && !successful &&
+                          <div className='font-subtitle text-lg'>Submit</div>  
+                        }
+                        {submitted &&
+                          <Spinner aria-label="Sending email..." color="info" />
+                        }
                       </Button>
                     </div>
                   </form>
                 </div>
-                <div className={`${(submitted && !successful) ? 'opacity-100' : 'hidden opacity-0'} transition-all duration-500 delay-150`}>
-                  <div className='flex flex-col items-center justify-center min-h-4/10vh w-full border-8 border-green'>
-                      <h1 className='text-center'>Sending</h1>
-                      <Spinner aria-label="Sending email..." color="info" />
-                  </div>
-                </div>
-                <div className={`${(successful) ? 'opacity-100' : 'hidden opacity-0'} transition-all duration-500 delay-150`}>
-                  <div className='flex flex-col items-center justify-center min-h-4/10vh w-full border-8 border-green'>
-                      <h1 className='text-center'>Successfully Sent</h1>
-                      <Button size='md' pill color="whitesmoke" onClick={() => {reset(); setSubmitted(false); setSuccessful(false)}} className='transition-all duration-500 w-1/2 border border-whitesmoke hover:border-black bg-eerie hover:bg-goldenrod text-whitesmoke hover:text-eerie'>
-                        Return to Form
-                      </Button>
+              </div>
+              <div className={`${(successful) ? 'opacity-100 z-10 delay-200' : 'opacity-0 z-0 delay-0'} absolute transition-all duration-500 flex min-h-1/10vh w-fit sm:w-fit p-8 border border-whitesmoke bg-eerie rounded-lg`}>
+                <div className="p-8 flex flex-col h-full w-full justify-center text-center text-whitesmoke will-change-transform transform-all duration-500">
+                  <div className={`${(successful) ? 'opacity-100 z-10' : 'opacity-0 z-0'} transition-all duration-500 delay-150`}>
+                    <div className='flex flex-col items-center justify-center w-full'>
+                        <h1 className='text-center mb-4 text-goldenrod'>Successfully Sent</h1>
+                        <Button size='md' pill color="whitesmoke" onClick={() => {reset(); setSubmitted(false); setSuccessful(false)}} className='transition-all duration-500 w-full border border-whitesmoke hover:border-black bg-eerie hover:bg-goldenrod text-whitesmoke hover:text-eerie'>
+                          Return to Form
+                        </Button>
+                    </div>
                   </div>
                 </div>
               </div>

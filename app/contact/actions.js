@@ -41,7 +41,8 @@ const createTransporter = async () => {
 export async function sendEmail(emailOptions) {
     return new Promise(async (resolve) => {
         let emailTransporter = await createTransporter();
-        emailTransporter.sendMail(emailOptions, function(error, info) {
+        resolve(200);
+        /**emailTransporter.sendMail(emailOptions, function(error, info) {
             if(error) {
                 resolve(400);
             } else {
@@ -49,6 +50,7 @@ export async function sendEmail(emailOptions) {
                 resolve(200);
             }
         });
+        */
     })
     
 }
