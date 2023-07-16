@@ -18,15 +18,17 @@ export default function Page() {
     setSubmitted(true);
     console.log(data);
     console.log('Sending')
-    var messageData = {
+    
+    var messageData = new URLSearchParams({
       subject: "New Message from " + data.contactName,
       text: "subject: " + data.contactSubject + "\nSent from: " + data.contactEmail + "\nMessage: " + data.contactMessage + "\nReferred by: " + data.contactReference,
       html: `<div><div>Sent from: ${data.contactEmail}</div><div>Subject: ${data.contactSubject}</div><div>Message: ${data.contactMessage}</div><div>Referred by: ${data.contactReference}</div></div>`,
       to: "declanrapp@gmail.com",
       from: process.env.EMAIL
-    }
-    sendEmail(messageData).then((result) => {
-      if(result==200) {
+    })
+    fetch('http://localhost:3001/mail-contact-form?' + messageData, {method: "POST"}).then((result) => {
+      console.log(result);
+      if(result.status==200) {
         console.log("We did it?");
         setSuccessful(true);
       }
@@ -35,6 +37,7 @@ export default function Page() {
         return 400;
       }
     }).catch(error => console.log(error));
+     
   }
 
   return (
