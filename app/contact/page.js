@@ -1,5 +1,5 @@
 import {FaEnvelope, FaPhone, FaLinkedin} from 'react-icons/fa6';
-import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/ContactForm/ContactForm';
 
 export default function Page() {
      
