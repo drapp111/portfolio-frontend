@@ -11,9 +11,9 @@ export default function Page() {
     <>
         <section className="flex flex-col max-h-min sm:flex-row justify-center w-full">
 
-            <div className="flex bg-cover bg-no-repeat bg-center w-full min-h-4/10vh shadow-inner-md items-center justify-center" style={{backgroundImage: `url(/godspell/Godspell__438.jpg)`}} >
-              <h1 className="sm:hidden text-4xl">About Me</h1>
-            </div>
+          <div className="flex bg-cover bg-no-repeat bg-center w-full min-h-4/10vh shadow-inner-md items-center justify-center" style={{backgroundImage: `url(/godspell/Godspell__438.jpg)`}} >
+            <h1 className="sm:hidden text-4xl">About Me</h1>
+          </div>
           <div className="relative flex flex-col p-0 sm:p-8 gap-y-4 w-full h-1/2 sm:h-full">
             <div className="hidden h-2/10 mb-4 sm:flex items-center justify-center text-center">
               <h1>About Me</h1>
