@@ -1,7 +1,10 @@
+//UI Components
+import Navbar from "../components/site/Navbar/Navbar";
+import MobileNavbar from "../components/site/Navbar/MobileNavbar";
+import PageFooter from "../components/site/Footer";
+
+//Styles
 import '../globals.css'
-import Navbar from "../components/Navbar/Navbar";
-import MobileNavbar from "../components/MobileNavbar";
-import PageFooter from "../components/Footer";
 
 export const metadata = {
   title: 'Declan Rapp Theatrical Design',

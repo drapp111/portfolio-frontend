@@ -1,13 +1,18 @@
+'ise client'
+
+//UI Components
+import ContactForm from '@/components/contact/ContactForm/ContactForm';
+
+//Icons
 import {FaEnvelope, FaPhone, FaLinkedin} from 'react-icons/fa6';
-import ContactForm from '@/components/ContactForm/ContactForm';
 
 export default function Page() {
      
   return (
     <>
         <section className="relative flex flex-col bg-black h-fit w-full">
-          <div className='bg-cover bg-center bg-[url("/cls/contact-header-2.JPG")] absolute sm:h-2/3 w-full shadow-inner-md filter brightness-50 z-0'></div>
-          <div className="flex flex-col min-h-2/10vh w-full z-10 bg-cover bg-center bg-[url('/cls/contact-header-2.JPG')] shadow-inner-md filter sm:bg-none sm:shadow-none">
+          <div className='bg-cover bg-center bg-[url("/pages/contact/header.jpg")] absolute sm:h-2/3 w-full shadow-inner-md filter brightness-50 z-0'></div>
+          <div className="flex flex-col min-h-2/10vh w-full z-10 bg-cover bg-center bg-[url('/contact/header.jpg')] shadow-inner-md filter sm:bg-none sm:shadow-none">
             <div className='flex flex-col h-full w-full p-16 items-center justify-center backdrop-brightness-50 sm:backdrop-brightness-100'>
               <div className='flex flex-col h-full w-full top-1/10vh sm:w-1/3 justify-center items-center p-4 z-10'>
                   <h1 className="text-4xl text-center mb-4 ">Get in Touch</h1>

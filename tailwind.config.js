@@ -125,6 +125,7 @@ module.exports = {
         'footer-mobile' : '15vh',
         'main' : '80vh'
       },
+      
       dropShadow : {
         'card' : [
           '0 1px 2px rgb(39 52 68 / 0.05)'
