@@ -48,14 +48,6 @@ export default function PageFooter() {
                                     Instagram
                                 </div>
                             </Link>
-                            <Link href="https://twitter.com/lighting_fella" target="_blank" className='flex flex-row fill-whitesmoke hover:fill-goldenrod visited:fill-wheat text-whitesmoke hover:text-goldenrod visited:text-wheat items-center'>
-                                <Footer.Icon
-                                icon={FaTwitter}
-                                />
-                                <div className='ml-2 text-xs sm:text-base md:text-lg lg:text-xl'> 
-                                    Twitter
-                                </div>
-                            </Link>
                             <Link href="https://github.com/drapp111" target="_blank" className='flex flex-row fill-whitesmoke hover:fill-goldenrod visited:fill-wheat text-whitesmoke hover:text-goldenrod visited:text-wheat items-center'>
                                 <Footer.Icon
                                 icon={FaGithub}

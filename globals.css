@@ -161,14 +161,15 @@
   .card img {
     @apply
       rounded-t-lg
+      
     ;
   }
 
   .performance-card {
     @apply
-      border border-whitesmoke
-      bg-wheat
-      shadow-goldenrod
+      border border-eerie
+      bg-night
+      shadow-whitesmoke
     ;
   }
 
@@ -177,16 +178,17 @@
       shadow-whitesmoke
       border
       p-4
+      
     ;
   }
 
   .experience-card.front {
     @apply
       border-eerie
-      bg-eerie
-      shadow-inner
-      shadow-black
-      w-36 h-48 sm:scale-125 xl:scale-150
+      bg-night
+      shadow-lg
+      shadow-whitesmoke
+      h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72
       mb-0 sm:mb-16 xl:mb-24
       
     ;
@@ -197,7 +199,7 @@
       border-wheat
       bg-white
       shadow-shine-sm shadow-whitesmoke
-      w-36 h-48 sm:scale-125 xl:scale-150
+      h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72
       mb-0 sm:mb-16 xl:mb-24
       p-0
     ;
