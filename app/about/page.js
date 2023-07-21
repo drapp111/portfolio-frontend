@@ -23,7 +23,7 @@ export default function Page() {
                 <div className="hidden h-2/10 mb-4 sm:flex items-center justify-center text-center">
                     <h1>About Me</h1>
                 </div>
-                <div className="flex h-fit sm:h-8/10 items-start justify-center text-center text-whitesmoke overflow-y-auto">
+                <div className="flex flex-col h-fit sm:h-8/10 items-start justify-center text-center text-whitesmoke overflow-y-auto">
                     <Biography />
                 </div>
             </div>
