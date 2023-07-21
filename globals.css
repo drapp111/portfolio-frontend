@@ -1,0 +1,263 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: RoxboroughCF;
+  src: url(/fonts/RoxboroughCF.ttf);
+}
+@font-face {
+  font-family: Lora;
+  src: url(/fonts/Lora.ttf)
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply
+      flex
+      flex-col
+      relative
+      min-h-screen
+    ;
+  }
+
+  header {
+    @apply
+      hidden sm:flex
+      min-h-header
+      w-full
+      bg-eerie
+      rounded-b-lg
+      overflow-visible
+      
+    ;
+  }
+
+  main {
+    @apply
+      w-full
+      bg-black
+      min-h-9/10vh
+      justify-between
+      z-0
+    ;
+  }
+
+  footer {
+    @apply  
+      flex
+      flex-col
+      relative
+      min-h-footer-mobile sm:min-h-footer
+      h-fit
+      w-full
+      bg-black
+  }
+
+
+  h1 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-xl sm:text-lg md:text-xl lg:text-2xl xl:text-4xl 2xl:text-6xl
+    ;
+  }
+  h2 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-lg sm:text-base md:text-lg lg:text-xl xl:text-3xl 2xl:text-5xl
+    ;
+  }
+  h3 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-title
+      text-base sm:text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-4xl
+    ;
+  }
+  h4 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-sm sm:text-sm md:text-base lg:text-lg xl:text-2xl 2xl:text-4xl
+    ;
+  }
+  h5 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-xs sm:text-xs md:text-sm lg:text-base xl:text-xl 2xl:text-3xl
+    ;
+  }
+  h6 {
+    @apply 
+      text-whitesmoke
+      whitespace-nowrap
+      font-subtitle
+      text-mobile sm:text-mobile md:text-xs lg:text-sm xl:text-lg 2xl:text-2xl
+    ;
+  }
+  
+  p {
+    @apply
+      font-body
+    ;
+  }
+  
+  button {
+    @apply
+      font-subtitle
+    ;
+    cursor: pointer;
+  }
+
+  .card {
+    @apply
+      flex
+      flex-col
+      rounded-lg
+      shadow-md
+    ;
+  }
+
+  .card .card-child {
+    @apply
+      flex
+      flex-col
+      h-full
+      justify-center
+      gap-1 sm:gap-2
+      p-0 sm:p-2
+  }
+
+  .card-child p {
+    @apply
+      whitespace-normal
+      leading-none
+      text-center
+    ;
+  }
+
+  .card-child h5 {
+    @apply
+      whitespace-normal
+      text-center
+      italic
+      font-bold
+      leading-none
+    ;
+  }
+
+  .card img {
+    @apply
+      rounded-t-lg
+      
+    ;
+  }
+
+  .performance-card {
+    @apply
+      border border-eerie
+      bg-night
+      shadow-whitesmoke
+    ;
+  }
+
+  .experience-card {
+    @apply
+      shadow-whitesmoke
+      border
+      p-4
+      
+    ;
+  }
+
+  .experience-card.front {
+    @apply
+      border-eerie
+      bg-night
+      shadow-lg
+      shadow-whitesmoke
+      h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72
+      mb-0 sm:mb-16 xl:mb-24
+      
+    ;
+  }
+
+  .experience-card.back {
+    @apply
+      border-wheat
+      bg-white
+      shadow-shine-sm shadow-whitesmoke
+      h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72
+      mb-0 sm:mb-16 xl:mb-24
+      p-0
+    ;
+    
+  }
+
+  .alert {
+    @apply
+      text-alert
+      text-left
+    ;
+  }
+
+
+  .nav-color {
+    -webkit-transition: color 1s;
+    -moz-transition:    color 1s;
+    -ms-transition:     color 1s;
+    -o-transition:      color 1s;
+    transition:         color 1s;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: white;
+    -webkit-background-clip: text;
+  }
+  
+}
+
+
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+
+/*
+General Formatting
+*/
+
+
+
+
