@@ -6,6 +6,8 @@ import {Link} from 'next/link';
 //UI Components
 import CardFlip from "@/components/about/CardFlip";
 import {Button} from 'flowbite-react';
+import Image from 'next/image';
+import header from '/public/pages/about/header.jpg'
 
 //Page Items
 import Biography from '/public/pages/about/Biography.jsx';
@@ -16,8 +18,12 @@ export default function Page() {
   return (
     <>
         <section className="flex flex-col max-h-min sm:flex-row justify-center w-full">
-            <div className="flex bg-cover bg-no-repeat bg-top w-full min-h-4/10vh shadow-inner-md items-center justify-center" style={{backgroundImage: `url(/pages/about/header.jpg)`}} >
-                <h1 className="sm:hidden text-4xl">About Me</h1>
+            <div className="relative flex w-full min-h-4/10vh shadow-inner-md items-center justify-center" >
+                <Image src={header} fill priority={true} sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
+                <div className='flex shadow-inner-md items-center justify-center min-h-4/10vh sm:h-full w-full z-10'>
+                    <h1 className="sm:hidden absolute text-4xl">About Me</h1>
+                </div>
+                
             </div>
             <div className="relative flex flex-col p-0 sm:p-8 gap-y-4 w-full h-1/2 sm:h-full">
                 <div className="hidden h-2/10 mb-4 sm:flex items-center justify-center text-center">
