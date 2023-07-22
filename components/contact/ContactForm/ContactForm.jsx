@@ -21,7 +21,7 @@ export default function ContactForm() {
     const [submitted, setSubmitted] = useState(false)
     const [successful, setSuccessful] = useState(false)
     const [failed, setFailed] = useState(false)
-    const [formLoading, setFormLoading] = useState(false)
+    const [formLoading, setFormLoading] = useState(true)
     const [referenceContent, setReferenceContent] = useState([])
 
     useEffect(() => {
