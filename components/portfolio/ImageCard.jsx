@@ -6,7 +6,7 @@ import Image from 'next/image';
 export function ImageCard(props) {
     return (
     <div className='relative h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72'>
-        <Image src={props.image} alt={props.alt} quality={100} fill sizes={'50vw'} className='object-cover object-center h-full w-full'/>
+        <Image src={props.image} alt={props.alt} quality={100} fill sizes={'25vw'} className='object-cover object-center h-full w-full'/>
     </div>
             
     );
