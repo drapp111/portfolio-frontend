@@ -26,9 +26,7 @@ export default function Page({params}) {
             setLoading(true);
             const page_text = await getPageText(params.shows);
             setPageText(page_text[0]);
-            console.log(page_text[0]);
             const images = await getImages(params.shows);
-            console.log(images);
             setPageImages(images);
             setLoading(false);
 
@@ -61,7 +59,7 @@ export default function Page({params}) {
                         </div>
                     ) : (
                         <div className={`relative flex flex-col w-full min-h-3/10vh h-fit`}>
-                            <Image src={IMAGE_PATH_PREFIX + pageText.image} fill sizes={'100vw'} alt={'Page header'} className='absolute top-0 left-0 w-full max-h-3/10vh object-cover object-center filter brightness-50 z-0' />
+                            <Image src={IMAGE_PATH_PREFIX + pageText.image} fill sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full max-h-3/10vh object-cover object-center filter brightness-50 z-0' />
                             <div className="flex flex-col w-full min-h-3/10vh shadow-inner-md items-center justify-center p-2 sm:p-8 z-10">
                                 <h1 className="text-goldenrod">{pageText.title}</h1>
                                 <h5>-</h5>
