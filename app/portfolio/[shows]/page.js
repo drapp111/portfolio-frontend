@@ -48,7 +48,7 @@ export default function Page({params}) {
     return (
         <>
             <div className={`${pageText.status == 'active' ? '' : 'hidden'}`}>
-                <section className="flex flex-col min-h-2/10vh w-full">
+                <section className="relative flex flex-col min-h-2/10vh h-fit w-full">
                     {loading ? (
                         <div role="status" className="flex flex-col w-full min-h-3/10vh h-fit items-center justify-center animate-pulse">
                             <div className="flex items-center justify-center w-full min-h-3/10vh bg-night rounded">
@@ -58,9 +58,9 @@ export default function Page({params}) {
                             </div>
                         </div>
                     ) : (
-                        <div className={`relative flex flex-col w-full min-h-3/10vh h-fit`}>
-                            <Image src={IMAGE_PATH_PREFIX + pageText.image} fill priority={true} sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full max-h-3/10vh object-cover object-center filter brightness-50 z-0' />
-                            <div className="flex flex-col w-full min-h-3/10vh shadow-inner-md items-center justify-center p-2 sm:p-8 z-10">
+                        <div className={` flex flex-col w-full min-h-3/10vh h-fit`}>
+                            <Image src={IMAGE_PATH_PREFIX + pageText.image} fill priority={true} sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
+                            <div className="flex flex-col w-full min-h-3/10vh h-fit shadow-inner-md items-center justify-center p-2 sm:p-8 z-10">
                                 <h1 className="text-goldenrod">{pageText.title}</h1>
                                 <h5>-</h5>
                                 <h5 className="mb-8 w-full sm:w-2/3 whitespace-normal text-center">{pageText.subtitle}</h5>

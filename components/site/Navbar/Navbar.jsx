@@ -23,7 +23,9 @@ export default function Navbar() {
             <div className="flex w-1/10 h-full justify-center items-end">
               <NavItem active={pathname == '/about'} items={...MENU_LIST[1]} />
             </div>
-            <Logo />
+            <div className="flex w-2/10 h-full justify-center items-end">
+                <Logo />
+            </div>
             <div className="flex w-1/10 h-full justify-center items-end">
               <NavItem active={pathname == '/contact'} items={...MENU_LIST[2]} />
             </div>
