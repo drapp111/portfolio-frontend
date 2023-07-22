@@ -33,7 +33,7 @@ export default function Page() {
       <>
           <section className="flex flex-col min-h-2/10vh w-full">
             <div className="relative flex flex-col w-full min-h-3/10vh h-fit">
-                <Image src={header} fill priority={true} sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
+                <Image src={header} fill priority={true} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
                 <div className="flex flex-col w-full min-h-3/10vh shadow-inner-md items-center justify-center p-2 sm:p-8 z-10">
                     <h1 className="mb-4 text-goldenrod">Theatrical Design and Production Portfolio</h1>
                     <h5 className="w-full sm:w-2/3 whitespace-normal text-center">Below is a select portfolio of my recent productions. My previous work includes lighting design, scenic design, and theatrical production, as well as some carpentry and construction work.</h5>

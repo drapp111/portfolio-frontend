@@ -19,7 +19,7 @@ export default function Page() {
     <>
         <section className="flex flex-col max-h-min sm:flex-row justify-center w-full">
             <div className="relative flex w-full min-h-4/10vh shadow-inner-md items-center justify-center" >
-                <Image src={header} fill priority={true} sizes={'40w'} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
+                <Image src={header} fill priority={true} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
                 <div className='flex shadow-inner-md items-center justify-center min-h-4/10vh sm:h-full w-full z-10'>
                     <h1 className="sm:hidden absolute text-4xl">About Me</h1>
                 </div>
