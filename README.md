@@ -30,8 +30,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/drapp111/portfolio-api">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/drapp111/portfolio-frontend">
+    <img src="/public/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Custom Portfolio Website Backend</h3>
@@ -39,14 +39,14 @@
   <p align="center">
     A backend API for my custom portfolio website.
     <br />
-    <a href="https://github.com/drapp111/portfolio-api"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/drapp111/portfolio-frontend"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://declanrappdesign.com">View Site</a>
     ·
-    <a href="https://github.com/drapp111/portfolio-api/issues">Report Bug</a>
+    <a href="https://github.com/drapp111/portfolio-frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/drapp111/portfolio-api/issues">Request Feature</a>
+    <a href="https://github.com/drapp111/portfolio-frontend/issues">Request Feature</a>
   </p>
 </div>
 
@@ -78,24 +78,21 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://declanrappdesign.com)
 
-Welcome to the API and Server portion of my custom lighting design website project! In this section, I'll give you a brief overview of how the backend of my custom portfolio website is structured and the technologies used to ensure seamless functionality.
+Welcome to the Website and Server portion of this project! In this section, I'll provide you with a comprehensive overview of the frontend website and the server setup that powers this custom portfolio website.
 
-🌐 Backend API with Express:
-The backend API is the backbone of the website, responsible for handling database interactions and email functionality. Developed using Express, a fast and flexible Node.js framework, it provides a robust and efficient platform for managing data and serving requests from the frontend.
+🎨 Frontend Website:
+The frontend of this project showcases the best of modern web development practices. It is built using React, Next.js, and TailwindCSS, creating a visually stunning and responsive user interface. Next.js enables server-side rendering and easy navigation, enhancing the overall performance and user experience. TailwindCSS streamlines styling, allowing for rapid development and consistent design across the website.
 
-💾 PostgreSQL Database:
-To store and manage data, I've integrated a PostgreSQL database with the backend API. PostgreSQL is a powerful, open-source relational database that ensures data integrity and provides excellent support for complex queries.
+🖥️ Server Setup:
+The server plays a crucial role in serving the website to users securely and efficiently. The server is powered by a Linux operating system, providing a stable and secure environment. Nginx serves as a reverse proxy, handling incoming requests and efficiently distributing them to the backend API. SSL (Secure Sockets Layer) is configured to encrypt data transmission, ensuring a safe browsing experience for users and protecting their sensitive information.
 
-📧 Gmail Integration:
-Staying connected with site visitors is crucial. That's why I've integrated Google OAuth and the Gmail API to enable email functionalities. Visitors can easily interact with the website and send feedback/requests through a contact form.
-
-🖥️ Nginx on Linux Server with SSL:
-To serve the website securely and optimize its performance, I've set up a custom Linux server on a personal Raspberry Pi, with Nginx as a reverse proxy. Nginx efficiently handles incoming requests and acts as a gateway to the backend API. SSL is also configured, ensuring all data exchanged is encrypted and secure.
+🌐 Backend API Integration:
+The frontend seamlessly communicates with the backend through a robust API built using Express. This API handles database interactions and email functionalities. It is integrated with a PostgreSQL database, providing a reliable and scalable data management solution. More information can be found in the [Portfolio API repository](https://github.com/drapp111/portfolio-api).
 
 🔁 Continuous Integration and Deployment (CI/CD):
-Making updates and deploying changes should be a breeze, which is why I've established a seamless CI/CD pipeline using GitHub Actions. This system automates testing and deployment processes, ensuring a smooth and reliable development workflow.
+To ensure a streamlined development workflow, I've implemented a powerful CI/CD system using GitHub Actions. This automates testing and deployment processes, enabling swift and reliable updates to the website and server configurations.
 
-Your feedback and contributions are highly appreciated as I continue to enhance and refine the API and server setup.
+Your feedback and contributions are highly appreciated as we continue to enhance and optimize this portfolio website.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -103,8 +100,9 @@ Your feedback and contributions are highly appreciated as I continue to enhance 
 
 ### Built With
 
-* [![Express][Express.js]][Express-url]
-* [![PostgreSQL][Postgres]][Postgres-url]
+* [![React][React.js]][React-url]
+* [![Next][Next.js]][Next-url]
+* [![TailwindCSS][Tailwind]][Tailwind-url]
 
 ### Deployed On
 
@@ -116,17 +114,17 @@ Your feedback and contributions are highly appreciated as I continue to enhance 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add additional functionality for web site
-    - [ ] Login/Authentication feature for site editing
-    - [ ] Database update functions for easier updates of text/image paths
-- [ ] Security Enhancements
-    - [ ] Configure encryption between client and server
-        - [ ] Part of a hobby project, no sensitive data is being passed between client and server
-    - [ ] Configure security on routes/API to allow for some routes to be made public
-- [ ] Allow public access
-    - [ ] Eventually open up some routes publicly, just for fun
+- [ ] Craft the visual design
+    - [ ] Add in more lighting elements (lenses, spotlights, animations)
+    - [ ] Unify theme elements with Tailwind/CSS
+- [ ] Clean Repository
+    - [ ] Add additional comments on pages/code sections
+    - [ ] Organize files/reconfigure folder structure
+    - [ ] Move portfolio images from repository to server to reduce project size
+- [ ] Authentication/Login for editing
+    - [ ] Implement authentication/login for easier editing of pages
 
-See the [open issues](https://github.com/drapp111/portfolio-api/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/drapp111/portfolio-frontend/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,7 +162,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Declan Rapp - declanrapp@gmail.com
 
-Project Link: [https://github.com/drapp111/portfolio-api](https://github.com/drapp111/portfolio-api)
+Project Link: [https://github.com/drapp111/portfolio-frontend](https://github.com/drapp111/portfolio-frontend)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -174,9 +172,10 @@ Project Link: [https://github.com/drapp111/portfolio-api](https://github.com/dra
 ## Acknowledgments
 
 * [Kelsey Doolittle - QA Tester and Design Assistance](https://www.linkedin.com/in/kelsey-doolittle)
-* [Express](https://expressjs.com/)
+* [React](https://expressjs.com/)
+* [Next.js](https://expressjs.com/)
+* [TailwindCSS](https://expressjs.com/)
 * [PostgreSQL](https://www.postgresql.org/docs/)
-* [Node-Postgres](https://node-postgres.com/)
 * [Raspberry Pi](https://www.raspberrypi.com/documentation/)
 * [Nginx](https://docs.nginx.com/)
 * [Othneil Drew - Readme template](https://github.com/othneildrew/Best-README-Template/tree/master)
@@ -188,21 +187,25 @@ Project Link: [https://github.com/drapp111/portfolio-api](https://github.com/dra
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/drapp111/portfolio-api.svg?style=for-the-badge
-[contributors-url]: https://github.com/drapp111/portfolio-api/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/drapp111/portfolio-api.svg?style=for-the-badge
-[forks-url]: https://github.com/drapp111/portfolio-api/network/members
-[stars-shield]: https://img.shields.io/github/stars/drapp111/portfolio-api.svg?style=for-the-badge
-[stars-url]: https://github.com/drapp111/portfolio-api/stargazers
-[issues-shield]: https://img.shields.io/github/issues/drapp111/portfolio-api.svg?style=for-the-badge
-[issues-url]: https://github.com/drapp111/portfolio-api/issues
-[license-shield]: https://img.shields.io/github/license/drapp111/portfolio-api.svg?style=for-the-badge
-[license-url]: https://github.com/drapp111/portfolio-api/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/drapp111/portfolio-frontend.svg?style=for-the-badge
+[contributors-url]: https://github.com/drapp111/portfolio-frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/drapp111/portfolio-frontend.svg?style=for-the-badge
+[forks-url]: https://github.com/drapp111/portfolio-frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/drapp111/portfolio-frontend.svg?style=for-the-badge
+[stars-url]: https://github.com/drapp111/portfolio-frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/drapp111/portfolio-frontend.svg?style=for-the-badge
+[issues-url]: https://github.com/drapp111/portfolio-frontend/issues
+[license-shield]: https://img.shields.io/github/license/drapp111/portfolio-frontend.svg?style=for-the-badge
+[license-url]: https://github.com/drapp111/portfolio-frontend/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/declanrapp
 [product-screenshot]: site-screenshot.png
-[Express.js]: https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white
-[Express-url]: https://expressjs.com/
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[Tailwind]: https://img.shields.io/badge/TailwindCSS-20232A?style=for-the-badge&logo=tailwindcss&logoColor=3490dc
+[Tailwind-url]: https://tailwindcss.com/
 [Postgres]: https://img.shields.io/badge/Postgres-20232A?style=for-the-badge&logo=postgresql&logoColor=61DAFB
 [Postgres-url]: https://www.postgresql.org/docs/
 [Pi]: https://img.shields.io/badge/Raspberry_Pi-20232A?style=for-the-badge&logo=raspberrypi&logoColor=c7053d
