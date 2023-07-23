@@ -78,19 +78,19 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://declanrappdesign.com)
 
-Welcome to the frontend portion of this project! In this section, I'll provide you with a comprehensive overview of the frontend website and the server setup that powers this custom portfolio website.
+Welcome to the frontend portion of this project! See below for an overview of the frontend website and the server setup that powers this custom website.
 
 🎨 Frontend Website:
 The frontend of this project showcases the best of modern web development practices. It is built using React, Next.js, and TailwindCSS, creating a visually stunning and responsive user interface. Next.js enables server-side rendering and easy navigation, enhancing the overall performance and user experience. TailwindCSS streamlines styling, allowing for rapid development and consistent design across the website.
 
 🖥️ Server Setup:
-The server plays a crucial role in serving the website to users securely and efficiently. I've configured the server to run on a personal Raspberry Pi, allowing me full control. Nginx serves as a reverse proxy, handling incoming requests and efficiently distributing them to the backend API. SSL (Secure Sockets Layer) is configured to encrypt data transmission, ensuring a safe browsing experience for users and protecting their sensitive information.
+The server plays a crucial role in serving the website to users securely and efficiently. I've configured the server to run on a personal Raspberry Pi, allowing me full control. Nginx serves as a reverse proxy, handling incoming requests and efficiently distributing them to the backend API. SSL is configured to encrypt data transmission, ensuring a safe browsing experience for users and protecting their sensitive information.
 
 🌐 Backend API Integration:
 The frontend seamlessly communicates with the backend through a robust API built using Express. This API handles database interactions and email functionalities. It is integrated with a PostgreSQL database, providing a reliable and scalable data management solution. More information can be found in the [Portfolio API repository](https://github.com/drapp111/portfolio-api).
 
 🔁 Continuous Integration and Deployment (CI/CD):
-To ensure a streamlined development workflow, I've implemented a powerful CI/CD system using GitHub Actions. This automates testing and deployment processes, enabling swift and reliable updates to the website and server configurations.
+To ensure a streamlined development workflow, I've implemented a powerful CI/CD system using GitHub Actions. This automates testing and deployment processes, enabling swift and reliable updates to the website.
 
 Your feedback and contributions are highly appreciated as we continue to enhance and optimize this portfolio website.
 
