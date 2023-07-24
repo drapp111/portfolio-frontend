@@ -23,14 +23,14 @@ export const Experiences = [
     {
         "showTitle" : "Le Moyne College",
         "showDates" : "September 2019 - September 2020",
-        "jobTitle" : "Master Electrician/Technical Director",
-        "description" : "Created and maintained the repertory plot for Le Moyne College's Marren and Jesuit Theaters. Responsibilities included implementing plots of light designers, troubleshooting technical issues, leading strike groups, and providing support for students taking Lighting Design classes.",
+        "jobTitle" : "Master Electrician\nand\nTechnical Director",
+        "description" : "Was the student responsible for reated and maintained the repertory plot for Le Moyne College's Marren and Jesuit Theaters. Responsibilities included implementing plots of light designers, troubleshooting technical issues, leading strike groups, and providing support for students taking Lighting Design classes.",
         "image" : "/pages/about/technical_director.jpg"
     },
     {
         "showTitle" : "The Odyssey",
         "showDates" : "June 2018 - August 2018",
-        "jobTitle" : "Assistant Stage Manager",
+        "jobTitle" : "Assistant\nStage Manager",
         "description" : "Worked closely with various local groups, including a gospel choir, local college students, and younger children, as well as equity actors who have appeared on Broadway for the first performance since its premiere at the Public Theater in New York City of a musical adaptation of The Odyssey.",
         "image" : "/pages/about/the_odyssey.jpg"
     },

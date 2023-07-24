@@ -4,7 +4,7 @@
 import {Link} from 'next/link';
 
 //UI Components
-import CardFlip from "@/components/about/CardFlip";
+import CardLens from "@/components/about/CardLens";
 import {Button} from 'flowbite-react';
 import Image from 'next/image';
 import header from '/public/pages/about/header.jpg'
@@ -21,13 +21,13 @@ export default function Page() {
             <div className="relative flex w-full min-h-4/10vh shadow-inner-md items-center justify-center" >
                 <Image src={header} fill priority={true} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
                 <div className='flex shadow-inner-md items-center justify-center min-h-4/10vh sm:h-full w-full z-10'>
-                    <h1 className="sm:hidden absolute text-4xl">About Me</h1>
+                    <h1 className="sm:hidden absolute text-4xl text-goldenrod">About Me</h1>
                 </div>
                 
             </div>
             <div className="relative flex flex-col p-0 sm:p-8 gap-y-4 w-full h-1/2 sm:h-full">
                 <div className="hidden h-2/10 mb-4 sm:flex items-center justify-center text-center">
-                    <h1>About Me</h1>
+                    <h1 className='text-goldenrod'>About Me</h1>
                 </div>
                 <div className="flex flex-col h-fit sm:h-8/10 items-start justify-center text-center text-whitesmoke overflow-y-auto">
                     <Biography />
@@ -36,13 +36,15 @@ export default function Page() {
         </section>
         <section className="flex flex-col sm:gap-y-4 bg-black sm:flex-col p-8 justify-evenly w-full">
             <div className="flex flex-col place-items-center text-center sm: mb-8 xl:mb-16">
-                <h1>Select Experience</h1>
+                <h1 className='text-goldenrod'>Select Experience</h1>
+                <h3>-</h3>
+                <h6>Click the lights to turn them on</h6>
             </div>
             <div className="flex p-4 justify-center w-full">
-                <div className="flex flex-row gap-x-16 gap-y-8 justify-center items-center flex-wrap max-w-[69rem]">
+                <div className="flex flex-row gap-x-16 gap-y-8 justify-center items-center flex-wrap ">
                     {Experiences.map((card, idx) => (
                         <div key={idx}>
-                            <CardFlip {...card} />
+                            <CardLens {...card} />
                         </div>
                     ))}
                 </div>
