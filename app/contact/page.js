@@ -14,7 +14,7 @@ export default function Page() {
     <>
         <section className="relative flex flex-col bg-black h-fit w-full">
             
-            <div className='absolute sm:h-2/3 w-full shadow-inner-md filter brightness-50 z-0 border-8'>
+            <div className='absolute sm:h-2/3 w-full shadow-inner-md filter brightness-50 z-0 '>
                 <Image src={header} fill priority={true} sizes={'40w'} alt={'Page header'} className='w-full object-cover object-center filter brightness-50 z-0' />
                 <div className='absolute h-full w-full shadow-inner-md'>
                 </div>
