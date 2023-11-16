@@ -213,6 +213,10 @@
     ;
   }
 
+  .lens {
+    border-radius: 50%;
+  }
+
 
   .nav-color {
     -webkit-transition: color 1s;
