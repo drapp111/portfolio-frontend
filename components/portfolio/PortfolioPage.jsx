@@ -54,7 +54,7 @@ export default function PortfolioPage({params}) {
                         </div>
                     ) : (
                         <div className={` flex flex-col w-full min-h-3/10vh h-fit`}>
-                            <Image src={IMAGE_PATH_PREFIX + pageText.image + process.env.PHOTO_EXTENSION} fill priority={true} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
+                            <Image src={IMAGE_PATH_PREFIX + pageText.image + props.extension} fill priority={true} alt={'Page header'} className='absolute top-0 left-0 w-full object-cover object-center filter brightness-50 z-0' />
                             <div className="flex flex-col w-full min-h-3/10vh h-fit shadow-inner-md items-center justify-center p-2 sm:p-8 z-10">
                                 <h1 className="text-goldenrod">{pageText.title}</h1>
                                 <h5>-</h5>
