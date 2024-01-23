@@ -2,7 +2,11 @@
 import Navbar from "../components/site/Navbar/Navbar";
 import MobileNavbar from "../components/site/Navbar/MobileNavbar";
 import PageFooter from "../components/site/Footer";
+
+//Vercel Packages
 import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 //Styles
 import '../globals.css'
 
@@ -39,6 +43,7 @@ export default function RootLayout({ children }) {
           <MobileNavbar />
         </footer>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
