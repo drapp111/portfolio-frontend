@@ -8,8 +8,6 @@ import header from '/public/pages/home/header.webp';
 
 import 'dotenv/config';
 
-console.log(process.env)
-
 export default function Page() {
   return (
     <>
