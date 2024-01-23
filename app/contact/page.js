@@ -1,9 +1,9 @@
-'ise client'
+'use client'
 
 //UI Components
 import ContactForm from '@/components/contact/ContactForm/ContactForm';
 import Image from 'next/image';
-import header from '/public/pages/contact/header.jpg'
+import header from '/public/pages/contact/header.webp'
 
 //Icons
 import {FaEnvelope, FaPhone, FaLinkedin} from 'react-icons/fa6';
@@ -20,7 +20,7 @@ export default function Page() {
                 </div>
             </div>
             <div className="relative flex flex-col min-h-4/10vh sm:min-h-2/10vh w-full z-10">
-                <Image src={header} fill priority={true} alt={'Page header'} className='w-full object-cover object-center filter brightness-50 z-0 sm:hidden' />
+                <Image src={header} priority={true} alt={'Page header'} className='w-full object-cover object-center filter brightness-50 z-0 sm:hidden' />
                 <div className='flex shadow-inner-md sm:shadow-none items-center justify-center min-h-4/10vh sm:min-h-2/10vh sm:h-full w-full z-10'>
                     <div className='flex flex-col h-full w-full top-1/10vh sm:w-1/3 justify-center items-center p-4 z-10'>
                         <h1 className="text-4xl text-center mb-4 ">Get in Touch</h1>

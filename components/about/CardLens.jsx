@@ -4,7 +4,7 @@
 import {useState} from 'react';
 
 //UI Components
-import lensImage from '/public/pages/about/lens1.png';
+import lensImage from '/public/pages/about/lens1.webp';
 import {Button} from 'flowbite-react';
 import Image from 'next/image';
 
@@ -12,7 +12,7 @@ export default function CardLens(props) {
     const [lens, setLens] = useState(false);
     return (
         <div className='relative flex h-96 w-96 md:h-[30rem] md:w-[30rem] xl:h-[36rem] xl:w-[36rem] -left-[.35rem] items-center justify-center'>
-            <Image fill src={lensImage} className='z-0'/>
+            <Image fill alt={'An image of the front of a ellipsoidal light'} src={lensImage} className='z-0'/>
             <div id="base" className={`z-0 relative lens h-[13.25rem] w-[13.25rem] md:h-[16.56rem] md:w-[16.56rem] xl:h-[19.87rem] xl:w-[19.87rem] left-1 md:left-[.35rem] bg-black border border-white items-center justify-center flex`}>
                 
                 <button id="off" onClick={() => setLens(true)} className={`${!lens ? 'opacity-100 z-20 delay-1000 duration-500' : 'opacity-0 z-10 duration-1000'} transition-all ease-in-out absolute lens h-full w-full bg-black`}>

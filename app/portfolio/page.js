@@ -6,8 +6,8 @@ import {useState, useEffect} from 'react';
 //UI Components
 import PortfolioCard from "@/components/portfolio/PortfolioCard";
 import Image from 'next/image';
-import header from '/public/pages/portfolio/header.jpg'
-
+import header from '/public/pages/portfolio/header.webp'
+import 'dotenv/config';
 //Server Components
 import {getShows} from "@/components/portfolio/serverActions";
 

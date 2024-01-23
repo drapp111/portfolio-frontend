@@ -11,11 +11,11 @@ export default function PortfolioCard(props) {
 
     const IMAGE_PATH_PREFIX = '/pages/portfolio/' + props.show_name + '/';
     const PAGE_LINK = '/portfolio/' + props.show_name;
-
+    
     return (
     <div className='card experience-card bg-night p-0 text-center h-64 w-48 md:h-80 md:w-60 xl:h-96 xl:w-72'>
         <div className='relative w-full h-full'>
-            <Image src={IMAGE_PATH_PREFIX + props.image} alt={props.title + " - " + props.dates} fill sizes="40vw" quality={100} className='object-cover object-center'/>
+            <Image src={IMAGE_PATH_PREFIX + props.image + process.env.PHOTO_EXTENSION} alt={props.title + " - " + props.dates} fill sizes="40vw" quality={100} className='object-cover object-center'/>
         </div>
         <div className='flex flex-col relative items-center justify-center h-full text-center p-2 sm:p-4'>
             <div className='mb-4 h-2/3'>

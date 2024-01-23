@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/drapp111/portfolio-frontend">
-    <img src="/public/assets/logo.png" alt="Logo" width="80" height="80">
+    <img src="/public/assets/logo.webp" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Custom Portfolio Website Backend</h3>
@@ -199,7 +199,7 @@ Project Link: [https://github.com/drapp111/portfolio-frontend](https://github.co
 [license-url]: https://github.com/drapp111/portfolio-frontend/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/declanrapp
-[product-screenshot]: /public/assets/site-screenshot.png
+[product-screenshot]: /public/assets/site-screenshot.webp
 [Next.js]: https://img.shields.io/badge/next.js-20232A?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB

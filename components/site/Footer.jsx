@@ -15,10 +15,10 @@ export default function PageFooter() {
     return (
 
         <div className="bg-night bottom-0 flex w-full h-fit shadow-footer shadow-gray z-50 rounded-t-lg transition-all duration-200">
-            <Footer container className='bg-night items-center lg:justify-normal'>
-                <div className="w-full flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between">
+            <Footer container className='bg-night items-center lg:justify-normal pt-3'>
+                <div className="w-full flex flex-col justify-center items-center sm:flex-row sm:items-center sm:justify-between mb-2">
                     <a href='/' className='mb-4 hidden items-center justify-center lg:flex lg:flex-row sm:mb-0'>
-                        <img alt='Declan Rapp Theatrical Design Logo' src='/assets/logo.png' className='flex mr-0 sm:mr-3 h-12 sm:h-24' />
+                        <img alt='Declan Rapp Theatrical Design Logo' src='/assets/logo.webp' className='flex mr-0 sm:mr-3 h-12 sm:h-24' />
                         <span className='self-center whitespace-nowrap text-lg sm:text-2xl font-semibold text-whitesmoke dark:text-whitesmoke'>
                             <TypeAnimation
                                 sequence={[

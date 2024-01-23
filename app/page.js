@@ -4,7 +4,11 @@
 import ContactButton from "@/components/site/ContactButton";
 import PerformanceCarousel from "@/components/home/carousel/PerformanceCarousel";
 import Image from 'next/image';
-import header from '/public/pages/home/header.jpg'
+import header from '/public/pages/home/header.webp';
+
+import 'dotenv/config';
+
+console.log(process.env)
 
 export default function Page() {
   return (
