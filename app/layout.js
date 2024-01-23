@@ -2,7 +2,7 @@
 import Navbar from "../components/site/Navbar/Navbar";
 import MobileNavbar from "../components/site/Navbar/MobileNavbar";
 import PageFooter from "../components/site/Footer";
-
+import { Analytics } from '@vercel/analytics/react';
 //Styles
 import '../globals.css'
 
@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
           <PageFooter />
           <MobileNavbar />
         </footer>
+        <Analytics />
       </body>
     </html>
   )
