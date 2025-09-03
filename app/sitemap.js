@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-
 export default function sitemap() {
     return [
       {
