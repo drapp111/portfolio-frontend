@@ -41,14 +41,14 @@ function Title() {
   )
 }
 
-function UpcomingPerformances() {
+function UpcomingPerformances(performanceList) {
   return (
     <div className="flex flex-col">
       <div className="flex min-h-1/10vh justify-center items-center">
         <h2>Upcoming and Recent Performances</h2>
       </div>
       <div className="flex min-h-4/10vh h-fit justify-center">
-        <PerformanceCarousel />
+        <PerformanceCarousel performanceList={performanceList} />
       </div>
     </div>
   )
